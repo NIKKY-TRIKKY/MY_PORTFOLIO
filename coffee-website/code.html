@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coffee App Hero Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec7f13",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221910",
+            },
+            fontFamily: {
+              "display": ["Be Vietnam Pro", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased">
+<!-- App Container -->
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark max-w-md mx-auto shadow-2xl">
+<!-- Header -->
+<div class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md transition-colors duration-300">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex shrink-0 items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-primary/20" data-alt="User profile picture showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCL9XKCCkOxYxMVGnGzpbTKoK14s-VkZ-2gChasijklaw_AP-YSqJG_BnSNEcGuOsGuCPUuHu_IpnfPSxqnwu0-0NiPp4b0g5uRPPni9SgHR6rSHch_RVS5ZZ0Gv1l8kATne7ZGybCvGjPG5nlZxK6ULZAY_oZqeIY_qyX3-TPR-pGTO2ICEhmRo-WV33zDES6PCIxEc4NJYElyEZc4ogT3-v5kZeNwfKe5EyuN0AbLaDSOvDRLCP_VQcqOj4xTddqM_nwGX9koP-0");'></div>
+<div class="flex flex-col">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">Good Morning, Alex</h2>
+<p class="text-gray-500 dark:text-[#b9ab9d] text-xs font-medium">Gold Member</p>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<div class="flex items-center gap-1.5 bg-background-dark/5 dark:bg-white/10 px-3 py-1.5 rounded-full border border-black/5 dark:border-white/5">
+<span class="material-symbols-outlined text-primary text-sm filled">star</span>
+<p class="text-primary text-sm font-bold leading-normal tracking-[0.015em]">350</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Scrollable Body -->
+<div class="flex-1 overflow-y-auto pb-24 no-scrollbar">
+<!-- Hero Section -->
+<div class="p-4 pt-2">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of espresso pouring into a ceramic cup with steam rising" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEXrYXJP0mdRKFd5dGj_fooBsNDmIg3ayiocQEwIVS_VSeblh8b3PdP0dO4n5_ilTaFSuOQu3jWWnlaiuV8_e_sGIW9G9oGeJe7LbUik8d72WwOkqq5IugDBDoDKU6t92bcBoglJs-y0eJUSK1-7mu_lrAt1Dw0hE8B40Tstdg4W4lP8oAID2mQgqerIIgAEUEd-krdr6_HBQJpeOHO_GSBrwpjY58mWDHU0fIJ2bTXaoRQYD77X27vVquoC7LJZW05m6gxVCduAs");'></div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<!-- Hero Content -->
+<div class="absolute bottom-0 left-0 w-full p-5 flex flex-col items-start gap-3">
+<span class="inline-flex items-center rounded-md bg-primary/90 px-2 py-1 text-xs font-bold uppercase tracking-wide text-white ring-1 ring-inset ring-white/20">
+                            Featured
+                        </span>
+<h1 class="text-white text-3xl font-bold leading-tight drop-shadow-md">Start your day with the perfect brew.</h1>
+<div class="flex w-full gap-3 pt-2">
+<button class="flex-1 bg-primary hover:bg-orange-600 text-white text-sm font-bold py-3 px-4 rounded-xl shadow-lg shadow-orange-900/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined filled text-[20px]">local_cafe</span>
+                                Order Now
+                            </button>
+<button class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/30 text-sm font-bold py-3 px-4 rounded-xl active:scale-[0.98] transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories -->
+<div class="flex flex-col pt-4">
+<h3 class="text-gray-900 dark:text-white tracking-tight text-xl font-bold leading-tight px-4 text-left pb-4">Categories</h3>
+<div class="flex gap-4 px-4 overflow-x-auto no-scrollbar pb-2">
+<!-- Category Item -->
+<button class="group flex flex-col items-center gap-2 min-w-[72px]">
+<div class="flex size-[72px] items-center justify-center rounded-full bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-[#b9ab9d] group-hover:text-primary transition-colors">local_cafe</span>
+</div>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">Hot</span>
+</button>
+<!-- Category Item -->
+<button class="group flex flex-col items-center gap-2 min-w-[72px]">
+<div class="flex size-[72px] items-center justify-center rounded-full bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-[#b9ab9d] group-hover:text-primary transition-colors">ac_unit</span>
+</div>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">Iced</span>
+</button>
+<!-- Category Item -->
+<button class="group flex flex-col items-center gap-2 min-w-[72px]">
+<div class="flex size-[72px] items-center justify-center rounded-full bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-[#b9ab9d] group-hover:text-primary transition-colors">bakery_dining</span>
+</div>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">Food</span>
+</button>
+<!-- Category Item -->
+<button class="group flex flex-col items-center gap-2 min-w-[72px]">
+<div class="flex size-[72px] items-center justify-center rounded-full bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-[#b9ab9d] group-hover:text-primary transition-colors">emoji_food_beverage</span>
+</div>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">Tea</span>
+</button>
+<!-- Category Item -->
+<button class="group flex flex-col items-center gap-2 min-w-[72px]">
+<div class="flex size-[72px] items-center justify-center rounded-full bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-[#b9ab9d] group-hover:text-primary transition-colors">shopping_bag</span>
+</div>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary">Merch</span>
+</button>
+</div>
+</div>
+<!-- Daily Special -->
+<div class="p-4 pt-6 @container">
+<div class="flex items-center justify-between pb-3">
+<h3 class="text-gray-900 dark:text-white tracking-tight text-xl font-bold leading-tight">Daily Special</h3>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Ends in 4h</span>
+</div>
+<div class="group relative flex flex-col items-stretch justify-start rounded-2xl @xl:flex-row @xl:items-start shadow-md bg-white dark:bg-[#27211c] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat h-48 bg-cover" data-alt="Pumpkin Spice Latte with whipped cream on a wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-RXkQTEJPH6B92Sb3ayLMM_rUjh468kChsbsZgvvIGRIkxc2QQ8JCIkAAu7x2S2pF4vBSNW2MSzqisBIVQWtfx3FDjrkgfRfwPIDVj4ATLRBp_RgrD_2aNFk7opNm1K7uHjoVWPIgEPY5vvlUsEKTuAhYXZ3UlS4y9J1wWfhRePeFBXCZqwBO87r6M-G31ePurL9XIZUPT4lSrx4CmD9n196HUAZhgGLPJSPsw9M_6ut3ZaqpL0KXVHRo8gFewG_eHCihloel6dI");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/60 backdrop-blur text-gray-900 dark:text-white text-xs font-bold px-2 py-1 rounded-lg shadow-sm">
+                            $4.50
+                        </div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 py-4 px-4">
+<div class="flex justify-between items-start">
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Pumpkin Spice Latte</p>
+</div>
+<p class="text-gray-500 dark:text-[#b9ab9d] text-sm font-normal leading-normal line-clamp-2">Autumn vibes in a cup. Espresso, steamed milk, and pumpkin spice sauce topped with whipped cream.</p>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal active:scale-[0.98] transition-transform">
+<span class="truncate">Add to Order</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Nearby Stores -->
+<div class="px-4 pt-2">
+<div class="flex items-center justify-between pb-3">
+<h3 class="text-gray-900 dark:text-white tracking-tight text-xl font-bold leading-tight">Nearby Stores</h3>
+<a class="text-primary text-sm font-bold" href="#">See map</a>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Store Card -->
+<div class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5">
+<div class="size-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Modern bright coffee shop interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5XCCx-LcnevM8nquRANyhSexGNyxRgbpL0w5VHJCeI-uiLYoYh2QQNjsDAhfkUxi4HIG7ssQIqV1SI3aKSFcjK0L2OilmcX46-NPz5K-88ssyOca5KW-T0cqpYZUMST9yNtlbkUEMoFiz3oC_SquWu4cjGCtFgjLINP-Ona9ZQVvTU6VvySfHFvOhujJWC1py3DjTXyltLW21StbG6DVrcbVy8seeqnPReNb8WX-0tITEfEjlLZjID7tXHLsw_zRIG99gtz5a-zM");'></div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-bold text-gray-900 dark:text-white truncate">Downtown Roastery</h4>
+<p class="text-xs font-medium text-gray-500 dark:text-[#b9ab9d] truncate mt-0.5">123 Main St • 0.5 mi</p>
+<div class="flex items-center gap-2 mt-1.5">
+<div class="size-1.5 rounded-full bg-green-500"></div>
+<span class="text-xs font-medium text-green-600 dark:text-green-400">Open until 9 PM</span>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-gray-50 dark:bg-white/5 text-gray-400 dark:text-gray-400 hover:text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-xl">arrow_forward_ios</span>
+</button>
+</div>
+<!-- Store Card -->
+<div class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-[#27211c] shadow-sm border border-gray-100 dark:border-white/5">
+<div class="size-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Cozy dark wood coffee shop corner" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnWf-uBmo2yAOfi5aWyMv7KFsvPZmzODOAbgDq0J6vcj5GteiE0DJMb_6mQLDogksUyf_aHT6nIrTlXL14KGL2jZ_6SMNymf0V9OhlxiR1b0h9MoTUnKCyrmT7EmfsJyWIpvUmuwAg0AP1TeULIdaV34WY9VPOC6qKVpnd_Ct7p8dC23UZc3Ynwx03H2Ja31Vv_pjLzPXD4vCTZ117ITz8zXO6ukk-XmHD_tIkFXRmkF3QPgycAtLqCqDloUDIGPKmduwYVEW3YH4");'></div>
+<div class="flex-1 min-w-0">
+<h4 class="text-base font-bold text-gray-900 dark:text-white truncate">Westside Café</h4>
+<p class="text-xs font-medium text-gray-500 dark:text-[#b9ab9d] truncate mt-0.5">456 West Ave • 1.2 mi</p>
+<div class="flex items-center gap-2 mt-1.5">
+<div class="size-1.5 rounded-full bg-orange-500"></div>
+<span class="text-xs font-medium text-orange-600 dark:text-orange-400">Closing soon</span>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-gray-50 dark:bg-white/5 text-gray-400 dark:text-gray-400 hover:text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-xl">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</div>
+<div class="h-6"></div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="sticky bottom-0 z-40 w-full bg-white/90 dark:bg-[#221910]/95 backdrop-blur-lg border-t border-gray-200 dark:border-white/10 pb-5 pt-1">
+<div class="grid grid-cols-5 items-end">
+<!-- Home (Active) -->
+<button class="group flex flex-col items-center gap-1 p-2 text-primary">
+<span class="material-symbols-outlined text-[26px] group-hover:scale-110 transition-transform filled">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<!-- Menu -->
+<button class="group flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-[#8e857e] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px] group-hover:scale-110 transition-transform">restaurant_menu</span>
+<span class="text-[10px] font-medium">Menu</span>
+</button>
+<!-- Scan (Floating Center) -->
+<div class="relative flex justify-center">
+<button class="absolute -top-6 shadow-xl shadow-primary/30 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white transition-transform active:scale-95 hover:bg-orange-600 border-4 border-white dark:border-[#221910]">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+</button>
+<div class="h-10 w-full"></div> <!-- Spacer for layout -->
+</div>
+<!-- Stores -->
+<button class="group flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-[#8e857e] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px] group-hover:scale-110 transition-transform">location_on</span>
+<span class="text-[10px] font-medium">Stores</span>
+</button>
+<!-- Account -->
+<button class="group flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-[#8e857e] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px] group-hover:scale-110 transition-transform">person</span>
+<span class="text-[10px] font-medium">Account</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

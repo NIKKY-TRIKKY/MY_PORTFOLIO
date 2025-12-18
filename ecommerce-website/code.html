@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Listing Screen</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                        "card-light": "#ffffff",
+                        "card-dark": "#2c2016",
+                        "text-main-light": "#181411",
+                        "text-main-dark": "#ececec",
+                        "text-sub-light": "#897261",
+                        "text-sub-dark": "#b09b8c",
+                        "input-bg-light": "#f4f2f0",
+                        "input-bg-dark": "#362a21",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-text-main-light dark:text-text-main-dark transition-colors duration-200">
+<div class="relative flex h-screen w-full flex-col overflow-hidden group/design-root">
+<!-- Header Section (Sticky) -->
+<header class="flex-none bg-background-light dark:bg-background-dark z-20 pb-2">
+<!-- Top Bar -->
+<div class="flex items-center px-4 pt-4 pb-2 justify-between">
+<h2 class="text-xl font-bold leading-tight tracking-tight flex-1">Discover</h2>
+<div class="flex items-center justify-end gap-3">
+<button class="flex items-center justify-center rounded-full w-10 h-10 bg-transparent text-text-main-light dark:text-text-main-dark hover:bg-input-bg-light dark:hover:bg-input-bg-dark transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="relative flex items-center justify-center rounded-full w-10 h-10 bg-transparent text-text-main-light dark:text-text-main-dark hover:bg-input-bg-light dark:hover:bg-input-bg-dark transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-2 right-2 block h-2 w-2 rounded-full bg-primary ring-2 ring-white dark:ring-background-dark"></span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-2">
+<div class="flex w-full items-center rounded-xl h-12 bg-input-bg-light dark:bg-input-bg-dark">
+<div class="flex items-center justify-center pl-4 text-text-sub-light dark:text-text-sub-dark">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full bg-transparent border-none focus:ring-0 text-text-main-light dark:text-text-main-dark placeholder:text-text-sub-light dark:placeholder:text-text-sub-dark h-full px-3 text-base font-normal leading-normal" placeholder="Search for sneakers, tech..."/>
+<button class="flex items-center justify-center pr-4 text-primary">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 py-2 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-sm transition-transform active:scale-95">
+<p class="text-white text-sm font-semibold leading-normal">All</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-input-bg-light dark:bg-input-bg-dark border border-transparent dark:border-white/5 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-white/10">
+<p class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal">Newest</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-input-bg-light dark:bg-input-bg-dark border border-transparent dark:border-white/5 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-white/10">
+<p class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal">Price: Low to High</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-input-bg-light dark:bg-input-bg-dark border border-transparent dark:border-white/5 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-white/10">
+<p class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal">On Sale</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-input-bg-light dark:bg-input-bg-dark border border-transparent dark:border-white/5 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-white/10">
+<p class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal">Clothing</p>
+</button>
+</div>
+</header>
+<!-- Scrollable Content Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Promotional Carousel -->
+<div class="flex overflow-x-auto no-scrollbar px-4 py-2 gap-4 snap-x snap-mandatory">
+<div class="snap-start shrink-0 flex w-[85%] sm:w-[300px] h-48 rounded-2xl overflow-hidden relative group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Fashion model wearing winter coat in a shopping street" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgjjK0btad-OELknXc-ogfZkAyRgl9ddsMKFXgDaC6j_Xbkaya6YcqhArcO341mTwncUN0s1XiC-GOBELijiSXoxos_NbCkyehtYgdulo68az9cy2f8CbV702r1_x4UmAcE_4kpVt4pnZyO0YEEwEkCExsfEd8aB8-_vN45MhiANM4U6o8rFXtjgb3Z37oRZyemJq-ZGCJfsvbAZNpWbJiFyFRQoOjjz117G1R5i0lX33gjTRQUUsjelmMn1XHtH5Fdr7k40afj44");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="inline-block px-2 py-1 bg-primary text-white text-xs font-bold rounded mb-2">LIMITED</span>
+<p class="text-white text-xl font-bold leading-tight">Spring Collection</p>
+<p class="text-white/80 text-sm mt-1">Up to 50% off select items</p>
+</div>
+</div>
+<div class="snap-start shrink-0 flex w-[85%] sm:w-[300px] h-48 rounded-2xl overflow-hidden relative group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of modern electronic circuit board with neon lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiKJdEYZp3AWYvIJWAd6uywNg7hjw57ERMT3xIfHJIJT2Oa1XRkQB6CaDBtuAGVq7nee2AovknK1Y3pZFenIb-XDxAQ9X7sg_HZe06gPuIOsDAijifqNhBPJVxvt1FHogwilRNLwNP-Xt-K-RqT8lPmIum6Hoiz08phPUUp4pdW63cSrWT-hMJPxUjw9V9GQz1SbsRvQPQzAQ-wVtpV_oCwjWjAS1n0dCQlmNpFCqBMAaEPNrVpGvPRYzPWzRYacH-2gnBBt50kXs");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="inline-block px-2 py-1 bg-white text-black text-xs font-bold rounded mb-2">TECH WEEK</span>
+<p class="text-white text-xl font-bold leading-tight">Latest Gadgets</p>
+<p class="text-white/80 text-sm mt-1">Upgrade your setup today</p>
+</div>
+</div>
+</div>
+<!-- Section Headline -->
+<div class="px-4 pt-6 pb-3 flex items-center justify-between">
+<h3 class="text-text-main-light dark:text-text-main-dark text-xl font-bold">New Arrivals</h3>
+<a class="text-primary text-sm font-semibold hover:underline" href="#">See All</a>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-4 px-4">
+<!-- Product Card 1 -->
+<div class="group flex flex-col bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Vintage film camera on a wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPCHrZySWqUhSjZbDBPIRiF17svspeTGFWurFImtnaPDkocxtriujTXFtIDCkECoQf_5ue98BbpwmV-G2dJKuwlL8QzuXrbXy-xxaBPWMrrVywyocP9gt-DQ9RPpCZDlP8km64nJ-s7JTWnRgGghESj9B1zFnVtLWkPhEw5h95lfWemqRx2uJNiKNb3jpFn1vegCIhe1I94Mn5xESm-DEGJ2e2032WX9KHW_Lw8x1Q4_2l_EX6FPQjGFoFXmtC4JqBW0M8Mv2XSa8");'></div>
+<button class="absolute top-2 right-2 h-8 w-8 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-yellow-400 text-[16px] fill-current">star</span>
+<span class="text-xs font-medium text-text-sub-light dark:text-text-sub-dark">4.5 (82)</span>
+</div>
+<h4 class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-snug line-clamp-2 mb-2 flex-1">Vintage Camera 35mm Lens</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-base font-bold text-text-main-light dark:text-text-main-dark">$120.00</span>
+<button class="h-8 w-8 flex items-center justify-center rounded-full bg-input-bg-light dark:bg-input-bg-dark text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 (Sale) -->
+<div class="group flex flex-col bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern wireless headphones on yellow background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZqc711NzgjmoYmYBTMSgovk3FXRdv4ZuBWmQWIJXmG-nrbYNAxWSi1OagIF_3RrTEN5f4MNNtzBOJ4cIn_5qoTqXYB0REOm4fQmrlXtzYXYspkf_venxHcYga39Gu-M2_a-g5ZGJ8hRUG9r9wxxE0wDYbLBYxZLsU9PKbriBkxFdpNAd8UiPPTnlBYNSgAMw11DOIGhr5Iu8Tx9uwz2DhRdTKyQ_b7E9vZZqWhpIpLpZUEqqUT9B29UmpkKeFyz4hRRY2ZNrQLmc");'></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 bg-primary text-white text-[10px] font-bold uppercase tracking-wider rounded-sm">Sale</span>
+<button class="absolute top-2 right-2 h-8 w-8 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-yellow-400 text-[16px] fill-current">star</span>
+<span class="text-xs font-medium text-text-sub-light dark:text-text-sub-dark">4.8 (124)</span>
+</div>
+<h4 class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-snug line-clamp-2 mb-2 flex-1">Wireless Noise Cancelling Headphones</h4>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col leading-none">
+<span class="text-base font-bold text-primary">$85.50</span>
+<span class="text-xs text-text-sub-light dark:text-text-sub-dark line-through decoration-slate-400">$110.00</span>
+</div>
+<button class="h-8 w-8 flex items-center justify-center rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-sm shadow-primary/30">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Brown leather backpack on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmSZLWL9ZXMkFzIEFoduRM7rVmy7GcXN__q3bkfX7qM7fmVZEE0qCJCbooIq8R3UorEyN6jpWZ2mRJFJkEL7qlbwTcwB5PVhz5JB9kT4coPPYUkl55n9zjswQ8dPEPWyqKtnOdPY5ktzwFpYWrLFtRo8I1Uq8GeIRq-cj_mse08oJzFWEKK-n09HZuak3lqZyxYIt2LJJ_gW2j4QH0kkjztiSoN6AbfxEdP_tCYJAkf0Uyv25v_5Ml5eA8O07dLIDQj5289YtvDeI");'></div>
+<button class="absolute top-2 right-2 h-8 w-8 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-yellow-400 text-[16px] fill-current">star</span>
+<span class="text-xs font-medium text-text-sub-light dark:text-text-sub-dark">4.2 (45)</span>
+</div>
+<h4 class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-snug line-clamp-2 mb-2 flex-1">Genuine Leather Travel Backpack</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-base font-bold text-text-main-light dark:text-text-main-dark">$200.00</span>
+<button class="h-8 w-8 flex items-center justify-center rounded-full bg-input-bg-light dark:bg-input-bg-dark text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="White smartwatch with white wristband" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu03G6s-wPoPKC2JXvAce_0mxFRNAj4tPVyr3cbLcwCn-BVFFNtT7irTPBcCyJ-u8MKZBVYC14Q-H6STID_yOHsEerK7_QmoaBcwUzIFImn7P5UEvCSL3LqDrO779pwOXZhok9DLHS-8O3BX3c0oqo8T8sn2md6L_2rtcGwPa5pDQzKuV3ZbaaBT8MUeEe5C_dp_sMyMZA0pw-34kePRoXNPF41F0Ib7UvZUV8lzZ1Ylfe5CdGJjtzuxs-eqo7zm864gtaQ0ldCGw");'></div>
+<button class="absolute top-2 right-2 h-8 w-8 flex items-center justify-center rounded-full bg-gray-900/10 dark:bg-white/30 backdrop-blur-md text-text-main-light dark:text-white hover:bg-white hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-yellow-400 text-[16px] fill-current">star</span>
+<span class="text-xs font-medium text-text-sub-light dark:text-text-sub-dark">4.9 (210)</span>
+</div>
+<h4 class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-snug line-clamp-2 mb-2 flex-1">Smart Watch Series 5 - Silver Aluminum</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-base font-bold text-text-main-light dark:text-text-main-dark">$150.00</span>
+<button class="h-8 w-8 flex items-center justify-center rounded-full bg-input-bg-light dark:bg-input-bg-dark text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Red sport sneaker on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKdNAp9Max58Vd2lgDmsijcpRMFETrtBPpTHouKFdHfIAlXZwE6xzznAMz6dgA8oV66npecaRHV9G0Pd3AKwlFn1ks1Sh1daBlYWQxOoVnvFwaOwGKaEdZP8KBch_OIe0uKdVaunV3NxxVn6AXzslc0TtIr6O2KHsmUa3S_bocdlNwKhaB0QB1iKb0nfbiOhrhVXjfWIVCz6M6dOK8g_yYVcGpWNiujsK85xvAWKyNn6eipT9vo0n15Met7G_d7hoKz5mxkrtfHHY");'></div>
+<button class="absolute top-2 right-2 h-8 w-8 flex items-center justify-center rounded-full bg-gray-900/10 dark:bg-white/30 backdrop-blur-md text-text-main-light dark:text-white hover:bg-white hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-yellow-400 text-[16px] fill-current">star</span>
+<span class="text-xs font-medium text-text-sub-light dark:text-text-sub-dark">4.7 (150)</span>
+</div>
+<h4 class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-snug line-clamp-2 mb-2 flex-1">Nike Air Max Red</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-base font-bold text-text-main-light dark:text-text-main-dark">$130.00</span>
+<button class="h-8 w-8 flex items-center justify-center rounded-full bg-input-bg-light dark:bg-input-bg-dark text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist abstract vase with shadows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvb3PBypO59MW2A5bXbWWfDB4oemwP9dhewtyfWDn5LFBx3m_Kx7BOhr_L4-3ZGnM4e9vDJkjsbJfkyzGWotGVsGy0jiS6AqUcnaoJNsN4ujvk8BkgQigYPcw4_O147MGcG0DUldPqEuET517vUeJrXIFVpfM6evw23UzvwrU3ZGYttS2pr4kSVyjgUFn3RQqjAW4Y8KUOkAukYb2yW46rvOj-GYnauWiXjVBkbTgq2PJgVNWQ3dBr4CSW1bJbZqOREiRSKpxv9-0");'></div>
+<button class="absolute top-2 right-2 h-8 w-8 flex items-center justify-center rounded-full bg-gray-900/10 dark:bg-white/30 backdrop-blur-md text-text-main-light dark:text-white hover:bg-white hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-yellow-400 text-[16px] fill-current">star</span>
+<span class="text-xs font-medium text-text-sub-light dark:text-text-sub-dark">4.3 (12)</span>
+</div>
+<h4 class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-snug line-clamp-2 mb-2 flex-1">Ceramic Vase - Minimalist</h4>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-base font-bold text-text-main-light dark:text-text-main-dark">$45.00</span>
+<button class="h-8 w-8 flex items-center justify-center rounded-full bg-input-bg-light dark:bg-input-bg-dark text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="h-6"></div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="absolute bottom-0 left-0 w-full bg-card-light dark:bg-card-dark border-t border-gray-100 dark:border-white/5 pb-5 pt-3 z-30 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-end">
+<button class="flex flex-col items-center gap-1 w-16 text-primary">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-16 text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</button>
+<!-- Sell Button (Highlighted) -->
+<div class="relative -top-5">
+<button class="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<span class="block text-center text-[10px] font-medium mt-1 text-text-sub-light dark:text-text-sub-dark">Sell</span>
+</div>
+<button class="flex flex-col items-center gap-1 w-16 text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary transition-colors">
+<div class="relative">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">2</span>
+</div>
+<span class="text-[10px] font-medium">Inbox</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-16 text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

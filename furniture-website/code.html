@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Haven Furniture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec7f13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d241b", 
+                        "text-main": "#181411",
+                        "text-light": "#897561",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-gray-100 transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Sticky Top Navigation -->
+<header class="sticky top-0 z-50 bg-surface-light/95 dark:bg-background-dark/95 backdrop-blur-sm transition-colors border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center px-4 py-3 justify-between">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-text-main dark:text-white text-xl font-extrabold tracking-tight flex-1 text-center">HAVEN</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-white relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-primary border-2 border-white dark:border-background-dark"></span>
+</button>
+</div>
+</div>
+<!-- Search Bar (Integrated into header area for better UX) -->
+<div class="px-4 pb-3">
+<label class="flex flex-col h-11 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-text-light dark:text-gray-400 flex bg-gray-100 dark:bg-surface-dark items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-text-main dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-surface-dark focus:border-none h-full placeholder:text-text-light dark:placeholder:text-gray-500 px-3 text-sm font-normal leading-normal transition-colors" placeholder="Search for sofas, tables, lamps..." value=""/>
+</div>
+</label>
+</div>
+</header>
+<!-- Categories (Chips) -->
+<div class="w-full bg-surface-light dark:bg-background-dark pt-2 pb-1">
+<div class="flex gap-3 px-4 overflow-x-auto scrollbar-hide py-2">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-5 shadow-md shadow-primary/20 transition-transform active:scale-95">
+<span class="text-sm font-bold">All</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-surface-dark px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-text-main dark:text-gray-200 text-sm font-medium">Sofas</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-surface-dark px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-text-main dark:text-gray-200 text-sm font-medium">Dining</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-surface-dark px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-text-main dark:text-gray-200 text-sm font-medium">Bedroom</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-surface-dark px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-text-main dark:text-gray-200 text-sm font-medium">Lighting</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-surface-dark px-5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="text-text-main dark:text-gray-200 text-sm font-medium">Outdoor</span>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="px-4 py-4">
+<div class="relative flex min-h-[420px] w-full flex-col justify-end overflow-hidden rounded-2xl bg-gray-200 shadow-lg">
+<!-- Background Image -->
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Modern living room with beige sofa and soft sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5_yi5PCdnzWY8VyZPy8izYgkPWhCaEp1i0DeQmEYQcyowe4Zsb_CxTj4QFtYWbodXKOqE9DyRLa6rngw5R--zV8f4JQmKk3sgsu-tyFxoPAnyeSZ-59Ab6PTqrOydXs_6obcYjvK2i91Y-cFwx6d8K-xQVqQqRnPVTlqBmrfzWoQrIumeOf8AsHu-BoT3yu6dNghWvZgepQjRP_KiXHa1dw9P5miGRRVGI5qY28Ajb8vEt-eiCblrNQxJKKqYlwe9ZMvovGEno1o");'>
+</div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-start gap-4 p-6">
+<div class="flex flex-col gap-1">
+<span class="text-primary font-bold text-xs tracking-wider uppercase">New Collection</span>
+<h1 class="text-white text-3xl font-black leading-tight tracking-tight max-w-[80%]">
+                            Elevate Your Living Space
+                        </h1>
+<p class="text-gray-200 text-sm font-medium max-w-[90%] mt-1">
+                            Discover the new summer collection designed for comfort and style.
+                        </p>
+</div>
+<button class="flex items-center justify-center rounded-xl h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide shadow-lg shadow-primary/30 active:scale-95 transition-all">
+                        Shop New Arrivals
+                    </button>
+</div>
+</div>
+</div>
+<!-- Trending Styles Section -->
+<section class="flex flex-col gap-2 py-4">
+<div class="flex items-center justify-between px-4">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Trending Styles</h3>
+<a class="text-primary text-sm font-bold" href="#">See All</a>
+</div>
+<div class="flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-4 pt-2">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-3 min-w-[160px] w-[160px] group cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-gray-100 dark:bg-surface-dark">
+<div class="absolute top-2 right-2 z-10 p-1.5 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full cursor-pointer hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[18px] text-gray-600 dark:text-gray-300">favorite</span>
+</div>
+<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern minimal grey armchair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqVcaZAEaC0ae52DOESDbSKWVVpGuQysivvwrozGp9S8PlmLqOTll2WyV13B9g4a9gpkdOhtQFooif_gfygJOafi0zsfCer6PyeJVpmj0b19CKeBZEnr7mhI48nKe1V-2M2fQGLrNQUItYtwny8cpKTobRDRDyutD3AnYOqOSsNkplD--iHQN4HFYrsFUFdnx2JgjnGSJT6ovZg66u9p8wymftpJZVR7x2MG8a4khFoORftJfnkbgI6KQb_DDUZm6FOdScBjRaKvc"/>
+</div>
+<div>
+<h4 class="text-text-main dark:text-white text-sm font-bold truncate">Velvet Lounge Chair</h4>
+<p class="text-text-light dark:text-gray-400 text-xs truncate">Mid-century modern</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-text-main dark:text-white text-sm font-bold">$349</span>
+<span class="text-gray-400 text-xs line-through">$420</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-3 min-w-[160px] w-[160px] group cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-gray-100 dark:bg-surface-dark">
+<div class="absolute top-2 right-2 z-10 p-1.5 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full cursor-pointer hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[18px] text-gray-600 dark:text-gray-300">favorite</span>
+</div>
+<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Wooden round coffee table with flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC0oNfGAPS7fmZZXJnVlmIYMqgNuiVNqbPVXnkOqsGIOvDM6E8hdA23g1fshBAemSCKguJGbHc0R6kcc2Yd0t032lmjA6Xhsw13zGmInzaP5JK1pUdVVq8YUP6PgvRTh9qGSp3WvJ2cNsBWNRxW72aQTYOGw3ro8MnUzTFRNgkr81JE66Fd_MP7GSKODNsbRsKEqpBjEhpiNZIqldr_3z_85RVzNWyRKVS8Jbsu2SIXOAa4mi6xwkBKmlP9ksjdHAhArX8kTrdqR0"/>
+</div>
+<div>
+<h4 class="text-text-main dark:text-white text-sm font-bold truncate">Oak Coffee Table</h4>
+<p class="text-text-light dark:text-gray-400 text-xs truncate">Solid wood finish</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-text-main dark:text-white text-sm font-bold">$189</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-3 min-w-[160px] w-[160px] group cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-gray-100 dark:bg-surface-dark">
+<div class="absolute top-2 right-2 z-10 p-1.5 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full cursor-pointer hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[18px] text-gray-600 dark:text-gray-300">favorite</span>
+</div>
+<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Colorful abstract patterned cushion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP1PYI1jHFbImiAIR9pwUs9n-PpxPGMIBzTNOljwsNA6P8y9HcibTNkNgSQriIlAJfcQp1a1iU3416Za4Zq8pOZkIpgYrJbR7FhiAPcEmhhyB6wbm5IChIbBTNbsdTdOR7Cu5giOwO1QLSLZlWqxbVACGcRwZAyNhTOwQxTUQiQVzKHqbQRlvK5BigCo4wEonOaBqd-M0c07N5fOhzc4CmWtAABji72pt6ANDYVl4gViE6s-BFaD5pVRC2ONsG51cym1zoMEj1_x0"/>
+</div>
+<div>
+<h4 class="text-text-main dark:text-white text-sm font-bold truncate">Artisan Cushion</h4>
+<p class="text-text-light dark:text-gray-400 text-xs truncate">Hand-woven texture</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-text-main dark:text-white text-sm font-bold">$45</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promotional Banner -->
+<div class="w-full px-4 py-2">
+<div class="relative w-full overflow-hidden rounded-2xl bg-primary flex items-center justify-between p-6">
+<!-- Abstract Pattern Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 20px 20px;"></div>
+<div class="flex flex-col gap-2 relative z-10">
+<h3 class="text-white text-2xl font-black leading-tight">Summer<br/>Comfort Sale</h3>
+<p class="text-white/90 text-sm font-medium">Up to 40% off selected items</p>
+</div>
+<div class="relative z-10">
+<button class="bg-white text-primary rounded-lg h-10 px-4 text-sm font-bold shadow-md whitespace-nowrap active:scale-95 transition-transform">
+                        Shop Sale
+                    </button>
+</div>
+</div>
+</div>
+<!-- Design Inspiration Section -->
+<section class="flex flex-col gap-2 py-4">
+<div class="flex items-center justify-between px-4 pb-2">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Design Inspiration</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 px-4">
+<!-- Inspiration Card 1 -->
+<div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer">
+<img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist bedroom with neutral tones and wooden accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGrt1u8azlnu4s0MNolBrSdgDL6Kkd-4oua-pVksd3Ccadt1EbfK-N5CSbnlAHh4RJQNbctPwd3spZK1mXCUZCLRr8N_KiN2dYASEUXJwpxyqQD0ZLrnxTrTaHXDccA02reccyS5d1K1k5Z5hJ-fBzhiCl5xuhs_i1a1Eh9FF02VDGxbASD1DbsH2OurB7siKOWpuzJ90LPgh2kgVyFRBWofVrj8rHNnaXNCh2UtQGIPqxdQnDmPe_oP7KSe3lRWv3zrkTdw0Fwqk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-sm font-bold">Nordic Retreat</p>
+<div class="flex items-center gap-1 mt-1">
+<p class="text-gray-200 text-xs">Shop the look</p>
+<span class="material-symbols-outlined text-[14px] text-gray-200">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Inspiration Card 2 -->
+<div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer mt-6">
+<img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Cozy reading corner with green armchair and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2imU7yZXSnKQYx7ulQ73-5-Aa4IbVMfNUZBUkt_pR5c_fswJ_-LkxMWgtPhzK6g3-KvreeWV79X7eDupB0MCyuuEzTEj7JULOPAquXhySbdWBRXxUzi5_5OE6hWgIZ73S0wmhvTsDGZJGypB5iO6d-ovz32rd5Sqlsc9AL48EPINzO1vIMznb8rNo_eizF3s_9wSLb7r4PGlVhhkYb4pyRByh7acWWrtBz9W6YyUlCFGhwhIk86uB_WyhlJUYfek4pB3JIlgXW20"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-sm font-bold">Urban Jungle</p>
+<div class="flex items-center gap-1 mt-1">
+<p class="text-gray-200 text-xs">Shop the look</p>
+<span class="material-symbols-outlined text-[14px] text-gray-200">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Inspiration Card 3 -->
+<div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer -mt-6">
+<img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Bright modern dining area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZtID5z36aIdnIGggK4EPXO0uatkEl32GF8Wvrg_1l3Z4hAzZR4cTAQJHa7pZ8JdV5nY-FhqSHCHQjhJXMCYgA3VVGzeq0f4Ka34He3vkL7CWQ6Zxa6yWxR4v5ZmxOo29IT3dqf1GPf2J39TwHFna7spa_d1YOGu0u0ImlrRHEe9-nrwVKrxK87LHuV0KWdzDl-VdakLNVR0prUy12i91bKj8HWNmIImiv-8Yih6gxG_qXz7k6buBjEqJw62C_-23UcMgB3dts_Vs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-sm font-bold">Modern Dining</p>
+<div class="flex items-center gap-1 mt-1">
+<p class="text-gray-200 text-xs">Shop the look</p>
+<span class="material-symbols-outlined text-[14px] text-gray-200">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Inspiration Card 4 -->
+<div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer">
+<img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Home office setup with wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf4GWt-zU1j-ZO1UVQBiwZsga2arlzUiqhOjPjYfxK88OMmWT4i_Sfgr9udMVQa8kcQlwuIzFCu5ciLZWzdjH5enk4cqRrhsxJtL3BpTKZUFKhZgEpPvuqQy2KnBI4YrT3d8TQ_3U8VdrOXoKPVDIombz__TDxn9FKO-KuXC5VdwIE621-Q7wvDfxbSMWv9cnRc72BO9G4ZaWubyiu7pH6JQxUr5Cc_Dlu0U1BNCwbZXE3Ysj8OP_yG0avz6fOIRFyJq0iu08x-8E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-sm font-bold">Focus Space</p>
+<div class="flex items-center gap-1 mt-1">
+<p class="text-gray-200 text-xs">Shop the look</p>
+<span class="material-symbols-outlined text-[14px] text-gray-200">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="h-6"></div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 pb-safe pt-2 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-end h-16 pb-2">
+<a class="flex flex-col items-center gap-1 w-full text-primary" href="#">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 w-full text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-medium">Catalog</span>
+</a>
+<a class="flex flex-col items-center gap-1 w-full text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-medium">Saved</span>
+</a>
+<a class="flex flex-col items-center gap-1 w-full text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Safe area spacer for mobile bottom bar -->
+<div class="h-[60px]"></div>
+</div>
+</body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News Platform Home Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922", 
+                        "surface": "#1E2A35",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden min-h-screen pb-24">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md px-4 py-3 border-b border-white/5">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-surface/50 text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h1 class="text-xl font-black tracking-tight text-white">NEWS<span class="text-primary">.</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center text-white">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="h-8 w-8 overflow-hidden rounded-full border border-white/10 bg-surface">
+<img class="h-full w-full object-cover" data-alt="User profile avatar of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByDo4xsAueddbtpPlA7a9Zb3_Q8Sq_6yQwNazH99LNbHH-sGW7t9F1ShCqTFvU_uCjypDpBWNUdkDH43j3vyP8hdyKbOTrec4Pg1QSY4HM_zJS0T1-_HL4JxqxDCMJljXNmWGuH89sCSKI5E55r415zQtU9LDLzrJ3D31OQPoQ9CR9dLaqnrp9RArc7lD82HCWc7YuAP7S5b89Qn62FX00c81iARL0DRw7ZydIvUCFOEvTmHKlSYGU7RP0BIaMUzThS8sTCgxTPb0"/>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="p-4 pb-0">
+<div class="relative flex min-h-[460px] w-full flex-col justify-end overflow-hidden rounded-xl bg-surface shadow-2xl">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 h-full w-full bg-cover bg-center" data-alt="People sitting around a conference table in a formal meeting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChTlQlmBCYmocM_VMT2FN5feu_w44qFfwmoiAHnYBgjeJohBcK8a1LVbVZqNLNDgborGDlrR6qVerIIg1O11W0A1d5HNXz0_R4Gw_fZfadrdaX5PDLvJPpVqJxqXsROpD2bP3Np_29njo9C3_pA9SIAiL1vuFeC2KBWTpzO7WBPZ6HftUj5Ar6O4voZrpFxlREDi4htSUAIgU8I2XusUDpiJLbhsnUAvEqcKymS65_pWXs3bzryUCUWjueTSJvtv_jbt_CTkzBC6o');">
+</div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 z-10 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+<!-- Content -->
+<div class="relative z-20 p-5 pb-8">
+<!-- LIVE Badge -->
+<div class="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/90 px-3 py-1 backdrop-blur-sm shadow-lg shadow-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+</span>
+<span class="text-xs font-bold uppercase tracking-wider text-white">Live Now</span>
+</div>
+<h2 class="mb-2 text-3xl font-black leading-tight tracking-tight text-white drop-shadow-md">
+                    Global Summit Reaches Unexpected Agreement
+                </h2>
+<p class="mb-5 text-sm font-medium leading-relaxed text-gray-200 line-clamp-2">
+                    Live coverage from Geneva as leaders sign the treaty that changes international trade laws forever.
+                </p>
+<button class="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary text-sm font-bold text-white transition active:scale-95">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                    Watch Broadcast
+                </button>
+</div>
+</div>
+</section>
+<!-- Ticker -->
+<section class="border-b border-white/5 py-4">
+<div class="no-scrollbar flex gap-3 overflow-x-auto px-4">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface px-4 border border-white/5">
+<span class="text-xs font-bold text-green-400">▲</span>
+<p class="text-xs font-bold text-white">S&amp;P 500 1.2%</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface px-4 border border-white/5">
+<span class="text-xs font-bold text-red-400">▼</span>
+<p class="text-xs font-bold text-white">BTC 0.5%</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface px-4 border border-white/5">
+<span class="text-xs font-bold text-primary">BREAKING</span>
+<p class="text-xs font-medium text-gray-300">Tech Giant Chip News</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface px-4 border border-white/5">
+<p class="text-xs font-medium text-gray-300">Oil Prices Stable</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface px-4 border border-white/5">
+<span class="text-xs font-bold text-green-400">▲</span>
+<p class="text-xs font-medium text-gray-300">NASDAQ 0.8%</p>
+</div>
+</div>
+</section>
+<!-- Category Nav -->
+<nav class="sticky top-[60px] z-40 bg-background-dark/95 py-2 backdrop-blur-xl">
+<div class="no-scrollbar flex gap-3 overflow-x-auto px-4 py-2">
+<button class="h-9 shrink-0 rounded-full bg-primary px-5 text-sm font-bold text-white shadow-lg shadow-primary/20">All</button>
+<button class="h-9 shrink-0 rounded-full bg-surface border border-white/5 px-5 text-sm font-medium text-gray-400 hover:text-white transition-colors">Politics</button>
+<button class="h-9 shrink-0 rounded-full bg-surface border border-white/5 px-5 text-sm font-medium text-gray-400 hover:text-white transition-colors">Tech</button>
+<button class="h-9 shrink-0 rounded-full bg-surface border border-white/5 px-5 text-sm font-medium text-gray-400 hover:text-white transition-colors">Business</button>
+<button class="h-9 shrink-0 rounded-full bg-surface border border-white/5 px-5 text-sm font-medium text-gray-400 hover:text-white transition-colors">Culture</button>
+<button class="h-9 shrink-0 rounded-full bg-surface border border-white/5 px-5 text-sm font-medium text-gray-400 hover:text-white transition-colors">Sports</button>
+</div>
+</nav>
+<!-- Featured Stories -->
+<section class="px-4 py-4">
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-lg font-bold text-white">Featured</h3>
+</div>
+<div class="group relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-surface">
+<img class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" data-alt="Rocket launching into the night sky with smoke trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD5oTxCnFEwH3HqH7_stNsxEe8WpJmaHILv7zOHKeyGmciUPBgQrtULqpYSqF0gYyxnbYlc8yvsFLcsWd_OoZWnouA6TktKndd8H0LBan0GCOSkJGanILotYHIbeKSTKjlW4nSrjDdYTRO6QHA7GsTOjAtIqgwI6Nic9hn2CTWccDvS0MmwGoz-YmlA66FgIHNk7Dx-z5gcQNUakb89iG6Ji1y5MZF1rlvObOnXWvsQnq-TaaxNq3vtyp3sLvlBQieHDLHQlgMqRQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-5">
+<span class="mb-2 block text-xs font-bold uppercase tracking-wider text-primary">Science</span>
+<h3 class="text-2xl font-bold leading-tight text-white">The Future of Space Travel: Mars Colony by 2030?</h3>
+<div class="mt-3 flex items-center gap-3 text-xs font-medium text-gray-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                        2h ago
+                    </div>
+<span>•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span>
+                        Dr. A. Smith
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Grid -->
+<section class="px-4 py-4">
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-lg font-bold text-white">Trending</h3>
+<button class="text-xs font-bold text-primary">View All</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square overflow-hidden rounded-lg bg-surface">
+<img class="h-full w-full object-cover" data-alt="Data analytics dashboard displayed on a laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMqqEHwdI_hV2kRoy69o0oBjLbZJis0k1Rlq1PgeQY0I33AQkU17R8F_R0GeLrU9PutaQH40ipVTCU2VzRHxKc76mQhOy_WAZMek9wfggWggmhvMNXWg_tbA6AJtouwXq7_8QI3_0d7e_ZC7mCPTsX_H2kFDUeuPMpY7ZY3ntUuhnyHYVk8NTZgcOQjbxJw1wnZ5UjC2eSZBWaBgcf6PFcmVk66ePBx1HhrxMRRPNpXSrctrhEcrsc384Qa0PcmWyhUNCIqEKpiX8"/>
+</div>
+<div>
+<span class="text-[10px] font-bold uppercase text-primary">Markets</span>
+<h4 class="mt-1 text-sm font-bold leading-snug text-white line-clamp-2">Tech Stocks Rally Ahead of Earnings</h4>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square overflow-hidden rounded-lg bg-surface">
+<img class="h-full w-full object-cover" data-alt="Close up of flowers representing nature and environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJZZLmpX7u5QRoqB7wgeZGJh7HuWevLyobxWQ8JmCnCg0ywguGQlAHlf3L8kRoMBurTe-D0ehmktSpcV53NPnG38zuPBPIACOCQS0zveqG-_beX-lc98P0yuMJpj2uRxpuDn73fRCsIBHUF8ltp8cNQqgHOJHr4DNgmcJVxKsKhoPzkfVb6RjLfdmhyeth2HNhdsLrDJy2_r9QLljMC7NQbtyPQ9bT4IVCNnBJX4TkT1qyiNSr87lcPeJuOyTYOnItFEVRWXlYM0U"/>
+</div>
+<div>
+<span class="text-[10px] font-bold uppercase text-primary">Climate</span>
+<h4 class="mt-1 text-sm font-bold leading-snug text-white line-clamp-2">New Global Initiative for Green Energy</h4>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square overflow-hidden rounded-lg bg-surface">
+<img class="h-full w-full object-cover" data-alt="Two people shaking hands in a business setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo0P6ZMGX7a8ApisRxeQYpFZ2J3YclqlplwSiKdXxWl9h9U3nioxZNGAQSqTz782ELMQF1E8jH-Z4fkUbQqZaOIJKKU-KgN7QwRYT10PgERmk711WY9H8bjcBzvKJ3Y77b6DmORyG0kATnkSdShfs4CCo3JcHXExl0QfkkGXy8eGhxM48100Y13LMEFyil8rgpH3nPRUo6p8FCBOXCICci2zPafDAZYgA_fuaX_RU68uSyGkpnyknP33rKn5Vibje_zgoRPnkr2WY"/>
+</div>
+<div>
+<span class="text-[10px] font-bold uppercase text-primary">Policy</span>
+<h4 class="mt-1 text-sm font-bold leading-snug text-white line-clamp-2">Trade Deal Negotiations Stalled</h4>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-square overflow-hidden rounded-lg bg-surface">
+<img class="h-full w-full object-cover" data-alt="Computer code on a monitor screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyJvTJl224tmVOkrhw2co3PXwyrYCEoXkfYj_QhyM2KjyQrwUfE9sNoM92h6XIwVZEMokDiqBn6OWbX004CCt-D2oOagpuk5F00ApcevTTCFUt1zYpuzmdyxcJyXiuKIsK1XP9DuOwAFX-UFfa_gwxkLSUhHZwyagRff6MCCWQSLP-h_09_dgv_PZabWp3sQzAzNwCZSPXHn1N1PJXGeVksvltXgLAMs03m0cA_-4x2fQcpeYvHLsWwe9GOrxf-PNpigPS36NJ8mQ"/>
+</div>
+<div>
+<span class="text-[10px] font-bold uppercase text-primary">Cyber</span>
+<h4 class="mt-1 text-sm font-bold leading-snug text-white line-clamp-2">New Security Protocols for Banking</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Most Read Section -->
+<section class="px-4 py-4">
+<h3 class="mb-4 text-lg font-bold text-white">Most Read</h3>
+<div class="flex flex-col gap-6">
+<article class="flex items-start gap-4">
+<span class="text-3xl font-black text-white/10">1</span>
+<div class="flex-1 border-b border-white/5 pb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Opinion</span>
+<h4 class="mt-1 text-base font-bold leading-snug text-white">Why the Metasverse Failed to Launch in 2024</h4>
+<p class="mt-1 text-xs text-gray-400">5 min read</p>
+</div>
+</article>
+<article class="flex items-start gap-4">
+<span class="text-3xl font-black text-white/10">2</span>
+<div class="flex-1 border-b border-white/5 pb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Health</span>
+<h4 class="mt-1 text-base font-bold leading-snug text-white">Breakthrough in Alzheimer's Research Announced</h4>
+<p class="mt-1 text-xs text-gray-400">3 min read</p>
+</div>
+</article>
+<article class="flex items-start gap-4">
+<span class="text-3xl font-black text-white/10">3</span>
+<div class="flex-1 border-b border-white/5 pb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Auto</span>
+<h4 class="mt-1 text-base font-bold leading-snug text-white">The Last Gasoline Engine: End of an Era</h4>
+<p class="mt-1 text-xs text-gray-400">7 min read</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around border-t border-white/10 bg-background-dark/95 backdrop-blur-xl pb-6 pt-3">
+<button class="group flex flex-col items-center gap-1">
+<div class="flex h-10 w-16 items-center justify-center rounded-full bg-primary/20 text-primary group-hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">home</span>
+</div>
+<span class="text-[10px] font-medium text-white">Home</span>
+</button>
+<button class="group flex flex-col items-center gap-1">
+<div class="flex h-10 w-16 items-center justify-center rounded-full text-gray-400 group-hover:bg-white/5 transition-colors group-hover:text-white">
+<span class="material-symbols-outlined">search</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-white">Search</span>
+</button>
+<button class="group flex flex-col items-center gap-1">
+<div class="flex h-10 w-16 items-center justify-center rounded-full text-gray-400 group-hover:bg-white/5 transition-colors group-hover:text-white">
+<span class="material-symbols-outlined">bookmark</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-white">Saved</span>
+</button>
+<button class="group flex flex-col items-center gap-1">
+<div class="flex h-10 w-16 items-center justify-center rounded-full text-gray-400 group-hover:bg-white/5 transition-colors group-hover:text-white">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-white">Account</span>
+</button>
+</nav>
+</body></html>

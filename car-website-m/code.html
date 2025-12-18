@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AutoLuxe - Car Dealer Hero</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md p-4 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-xl font-extrabold leading-tight tracking-tight">AutoLuxe</h2>
+</div>
+<div class="flex items-center justify-end gap-3">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+<div class="bg-cover bg-center h-8 w-8 rounded-full border border-slate-200 dark:border-slate-700" data-alt="User profile avatar showing a smiling man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDu0j1NT2NEt4V4dmrETgAo--r9LR3Om5qKuFDzwjsiMyxWkJmsnjCBielQmbLv2kw-yQ9OJMjeTRbxKfRVaZsatYJSG-cAvAkHu0amD8M_7c3iPnLP5xmrAH5ac-4J2PNUOFgtL2xKzaY6EOLhK-9ZEzhgMGXlGSqe2II-QDb2UAGgdy_GtWjcxf4f3uXRYzrez4tvhwuP_wGDAHQyjRjO6IMQSPR57ybaUyNhMpfVc3EgyyF5TOpOlgK799iMN7Yk0KJNI8RPlAw");'>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="@container w-full">
+<div class="relative flex flex-col justify-end overflow-hidden h-[420px] w-full" data-alt="Sleek dark luxury sports car parked in a modern minimalist garage with moody lighting" style='background-image: linear-gradient(180deg, rgba(16, 25, 34, 0.00) 0%, rgba(16, 25, 34, 0.60) 60%, rgba(16, 25, 34, 1.00) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpCV4iTCszVex3Ew1G78mJGbbUi39VmzQKjnGxtpRUNzi4sM8O3DHRNfSH-PhYgJUG6_Wxb_y5ldTmDJ6ZmE26IQiOuznF8Afk7LFNIW_SzGi0VARN8uEKWdIMwUwf5yjMHMS0HNDQae8nzkB_NSnLQSSeGn3rIHqeLZEGzRAuSUuOJpHwjQw0GO5nMUZ1TjChLU_1zvUrYgyyZ3lpRhI5Qnb8MIqy9TSRkndl95Jd0VrsF8sugai28BSxiKDVqYDjcB8S9rEZ0co"); background-size: cover; background-position: center;'>
+<!-- Featured Badge -->
+<div class="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                    Deal of the Week
+                </div>
+<div class="flex flex-col p-6 pb-12 z-10">
+<h1 class="text-white tracking-tighter text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-sm mb-2">Drive the <br/>Extraordinary</h1>
+<p class="text-slate-200 text-lg font-medium opacity-90">2024 Model S Plaid — Starting at $899/mo</p>
+<button class="mt-4 w-fit bg-white text-slate-900 hover:bg-slate-100 active:scale-95 transition-all px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
+                        View Offer
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Search Bar (Overlapping) -->
+<div class="px-4 -mt-8 relative z-20">
+<label class="flex flex-col w-full shadow-xl shadow-black/10 dark:shadow-black/40">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-14 overflow-hidden bg-white dark:bg-[#1c2732] border border-slate-100 dark:border-slate-700 transition-colors">
+<div class="text-primary flex items-center justify-center pl-4 pr-2">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none bg-transparent text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 px-2 text-base font-medium leading-normal focus:outline-none border-none ring-0 focus:ring-0" placeholder="Search make, model, or year..." value=""/>
+<div class="flex items-center justify-center pr-2">
+<button class="p-2 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+<!-- Categories Headline -->
+<div class="flex items-center justify-between px-4 pt-8 pb-4">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-xl font-bold leading-tight">Browse Categories</h2>
+<button class="text-primary text-sm font-bold hover:opacity-80 transition-opacity">See All</button>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 gap-4 px-4 pb-6">
+<!-- Item 1 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Front view of a red luxury sedan on a road" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsxqc34PnMQBMGA1BLDJuPakbHAQ7DOahIFZLyaG_ihfJ5RSdRv7nnUUMo7MsQPHMSonVs_uEKHflJvZ49pVEn50Xr2qKJ7FXxF5qUKpOlKsYZ_GpgunagwkPp99VFzn7IFOl0yICirpswD82-mttwrXUwyrhoqIH4aC9kIgWM1uCDAKsHyAdc6qFNUu-pg11-sJ5Mm0bvORCLNNVzQVIEIEcT-kfiZ7O7Hod6BrIbZgin30mGMSOAoZQXPlN7s7LxQBDppwiVBoU");'>
+</div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">New Arrivals</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Latest 2024 models</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Silver SUV parked in a scenic mountain background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcAa8fvy3AZo3FCSUM8yvqUKQDLffFc0-KV87BQn4GJ-u_4mU-m0-f_X-IBCysSmxJ2kTZ2COBnclpI3mIFqwlRq2OtJmk4C9HttbWqX5ByXUgCjOmnBNDZQCeoGaFi-FO-YKF3JR5VU85z0xXEdeBpXMliqs64x4l17r5n0m_ZCLHe0UDni4wvVKSVyMPhy2F9VeLKILoOZMEGCCobPx-C4DyzWn83GEplLvdveCqp43SMMEgwuhansdO-1RRbFvtjxk5T2AU4qg");'>
+</div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">Used Cars</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Certified pre-owned</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of an electric vehicle charging port with green light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzxNWhtSJ9sJZN13oJE5Bg6yisPTBwsHoRuEZgO7iu2MIaU59_kOn8ECSdU7O19uYIFnuGlv26D2_u8z1yfoUA_AfYHNuHJafzEi78m2hS1IoY-571idOn_KRP5F-iqtQl9iNx3uCp5wK4HbHsouwXmFPvFHJd1RpFJGf6-y27NiPIniiHiFyXzXZSM_eqaRUGGOpgW7M5y4wgLg45unq-gyNuTIEnFolsVyfX0nbTgh4COKPtYuiUxbyXr4P_cU4JDKZR_Ynb4Mc");'>
+</div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">EVs / Hybrids</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Eco-friendly driving</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[4/3] overflow-hidden rounded-xl shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Person holding car keys in a dealership setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDOL5JL-EHdQWLhxJKxjwzvyqTkA-omaCAmkxNySERMPphIyPYhu4HdwqmzusO27QExRM1lZGRU8MyjXYxh4AQIh0Ubtf7nTK4unr_ZSvYbtqOexsq6dt02AF8kUXRhhwBDlIuVgB_VzCYeZdlB9igIJQb8JQP6NiGCKAq9OXEES2oT35qIpRnSNyqcfYE1BqUgOQi6nqje60EIY7BtHi_9zBwdYO1lcfB2eeyrT82SSM3iDN-1ncXaUIeJh_bEolyTCqvBBORwTY");'>
+</div>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">Financing</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Get pre-approved</p>
+</div>
+</div>
+</div>
+<!-- Featured List (Horizontal Scroll) -->
+<div class="px-4 pt-4 pb-8">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-xl font-bold leading-tight mb-4">Trending Now</h2>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+<!-- Card 1 -->
+<div class="min-w-[280px] bg-white dark:bg-[#1c2732] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-40 bg-cover bg-center" data-alt="Side view of a white convertible sports car" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnbNLQAcuv3mZ6ueSyJAnvDCbY16ykjQAqUP7bMfXsGxX8mSFCCAAUcHs_yEDqEDMpkN_hHMYK18YYVBQ59Oq3Rchb1HNYxO_ASwmodjHuQ-Rce-zCrDJDSpiF23zhANwfV280mGKuePy58LcbQiENmh1t8APOT7uESVzWpsfRyuyv1h6sFc3hleFFjdoWHb_GvrGeuMqV-wbvCO9-S9Mc_tXMV-TX08Obya0wqxYy_FAytxk-TpARCg57ubRGXHDbtqgKX2NaP9c");'></div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">BMW Z4</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase">Convertible • 2023</p>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-md">$52,000</span>
+</div>
+<div class="flex items-center gap-4 mt-3 text-slate-500 dark:text-slate-400 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">speed</span> 0-60 4.2s</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_gas_station</span> 28 MPG</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] bg-white dark:bg-[#1c2732] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-40 bg-cover bg-center" data-alt="Blue luxury SUV driving on a highway" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2xUVYlQq63Lh2GRpAr3OIDVpJmHNM1_JoBt7OAslpzSI6lrMlPWyQ7EuLrAsJW4d6qZUPRzamQmdKBWQAtx66PXxd7oWGa8GOzeaOYyWNlhkUy8gnknfMVDKi25btoqM72WK7lE3-7_8qAiO3s14gyEHwdgbq4UM4bA_rRR24G6b24gGFBfPSWVvq1WOeC5mua7H8gPhpDJI8d0m4m5jJez_FNka84o7jdk4yixAKx9LOmEJ2qmu27gHgu0z7Eu2blJWK_3yRlgA");'></div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">Audi Q8</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase">SUV • 2024</p>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-md">$74,500</span>
+</div>
+<div class="flex items-center gap-4 mt-3 text-slate-500 dark:text-slate-400 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">speed</span> 335 HP</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">settings</span> AWD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-20 bg-transparent"></div>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 w-full bg-white/90 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe pt-2 px-2 z-50">
+<div class="flex justify-around items-center h-16 max-w-md mx-auto">
+<button class="flex flex-col items-center justify-center w-full h-full text-primary gap-1">
+<span class="material-symbols-outlined text-[26px] filled">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors">
+<span class="material-symbols-outlined text-[26px]">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors">
+<span class="material-symbols-outlined text-[26px]">favorite</span>
+<span class="text-[10px] font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-5 w-full"></div>
+</div>
+</body></html>

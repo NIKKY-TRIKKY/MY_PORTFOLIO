@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel App Hero Screen</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1b2633",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col pb-24">
+<!-- Immersive Hero Section -->
+<div class="relative w-full h-[420px] shrink-0 rounded-b-[40px] overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="Scenic view of Cinque Terre, Italy with colorful buildings on a cliff overlooking the sea" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMEktM44dlsvxpWmj6Cny5yc1QdsFhcNiBh7bQJpbRFPotSJRlX_2HXZHwSpCdmsq4gfDbXA79SxoJecgjEiC0qHVQTxkcu4_lJAmdnf8h6KSMzwzuSKJNl3wZhrpD-30uTrW_j2GPSmMJgdL97lVxX3HQqsrmoqbll43MTDW4i1JTeqp4ns47p_TQ8lJ8XFetd28s6JMhf-UXCeWXrvTo5DXIbtFSQsbC1XPMGvOauFCi7OR8GlBXMgEHyvLKRxWxkuRim3uVbMo");'>
+</div>
+<!-- Dark Gradient Overlay for Readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent z-10"></div>
+<!-- Content Wrapper -->
+<div class="relative z-20 flex flex-col h-full px-6 pt-14"> <!-- pt-14 for status bar space -->
+<!-- Top Header -->
+<div class="flex items-center justify-between w-full mb-8">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full border-2 border-white/30 overflow-hidden bg-gray-200">
+<img alt="User profile picture" class="w-full h-full object-cover" data-alt="Portrait of a smiling young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDlGu2AaV21SQl0mNGlr_Gaur6Wnw6xrw8Eu0Sg-xSQVDLkl4bS8qajlOLZ9ICWN2BKIlrCpGflAuf0H5GRSO6AHSWOL6nt47HR8CkOMJCp3ehQuLAV2a1fC7WSMTnLIyg7GouU5YZ3NbWV2O4lH9bZ-H8zZM9_3RbRdbbe2Prq-s3n3MCVaaI0YMfqLEwzR-EpUIivA314s8skBfIhFh7PPElGm3pHYQh9aBtV9otfbS77wZtgTUs1JxJf-4F9wMfrf69NrE7R2g"/>
+</div>
+<div class="flex flex-col">
+<span class="text-white/80 text-sm font-medium">Good Morning,</span>
+<span class="text-white text-lg font-bold leading-tight">Alex</span>
+</div>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 24px;">notifications</span>
+</button>
+</div>
+<!-- Hero Text -->
+<div class="mt-4 max-w-[80%]">
+<h1 class="text-white text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight drop-shadow-sm">
+                        Discover the <br/>
+<span class="text-blue-200">world's wonders.</span>
+</h1>
+</div>
+</div>
+</div>
+<!-- Floating Search Capsule (Overlapping) -->
+<div class="relative z-30 -mt-16 px-4 w-full max-w-xl mx-auto">
+<div class="bg-surface-light dark:bg-surface-dark rounded-[2.5rem] shadow-xl shadow-gray-200/50 dark:shadow-black/40 p-2">
+<!-- Tabs -->
+<div class="flex gap-4 px-6 pt-3 pb-2">
+<button class="text-primary font-bold text-sm border-b-2 border-primary pb-1">Stays</button>
+<button class="text-gray-400 dark:text-gray-500 font-medium text-sm hover:text-gray-600 dark:hover:text-gray-300 pb-1 transition-colors">Flights</button>
+<button class="text-gray-400 dark:text-gray-500 font-medium text-sm hover:text-gray-600 dark:hover:text-gray-300 pb-1 transition-colors">Car Rental</button>
+</div>
+<!-- Input Row -->
+<div class="flex items-center gap-2 pl-6 pr-2 py-1">
+<div class="flex flex-col flex-1">
+<label class="text-xs text-gray-400 font-medium uppercase tracking-wider">Location</label>
+<input class="w-full bg-transparent border-none p-0 text-[#111418] dark:text-white font-bold text-lg placeholder-gray-300 focus:ring-0 leading-tight truncate" placeholder="Where to?" type="text"/>
+</div>
+<!-- Search Button -->
+<button class="shrink-0 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex flex-col mt-6 w-full max-w-xl mx-auto">
+<!-- Category Chips -->
+<div class="w-full overflow-x-auto no-scrollbar pb-2">
+<div class="flex px-4 gap-3 min-w-max">
+<button class="flex h-11 items-center gap-2 px-5 rounded-full bg-primary text-white shadow-md shadow-primary/20 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<span class="font-bold text-sm">All</span>
+</button>
+<button class="flex h-11 items-center gap-2 px-5 rounded-full bg-white dark:bg-surface-dark text-[#111418] dark:text-white border border-gray-100 dark:border-gray-800 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-gray-500 text-[20px]">hiking</span>
+<span class="font-medium text-sm">Adventure</span>
+</button>
+<button class="flex h-11 items-center gap-2 px-5 rounded-full bg-white dark:bg-surface-dark text-[#111418] dark:text-white border border-gray-100 dark:border-gray-800 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-gray-500 text-[20px]">self_improvement</span>
+<span class="font-medium text-sm">Relaxation</span>
+</button>
+<button class="flex h-11 items-center gap-2 px-5 rounded-full bg-white dark:bg-surface-dark text-[#111418] dark:text-white border border-gray-100 dark:border-gray-800 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-gray-500 text-[20px]">apartment</span>
+<span class="font-medium text-sm">City Break</span>
+</button>
+</div>
+</div>
+<!-- Trending Section -->
+<div class="mt-8">
+<div class="flex items-center justify-between px-6 mb-4">
+<h3 class="text-xl font-bold tracking-tight text-[#111418] dark:text-white">Trending Now</h3>
+<button class="text-sm font-bold text-primary hover:opacity-80">See All</button>
+</div>
+<!-- Carousel -->
+<div class="w-full overflow-x-auto no-scrollbar pb-6 px-4">
+<div class="flex gap-4 min-w-max">
+<!-- Card 1 -->
+<div class="relative w-64 h-80 rounded-[2rem] overflow-hidden group active:scale-95 transition-transform duration-300">
+<div class="absolute inset-0 bg-gray-200" data-alt="Traditional Japanese street in Kyoto with wooden buildings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASz9oW6GZTDv4S5aDpN-I4xCLNZ_ARfEjWVmxG6yKpChc41O9xVUPZ9C663rglI9Rzn1lhDZJFQwkboIR3Eknc3Qlq-CixJYTVNiWvEve8owAMXw4HJhC4kHkcV630izqFciGcYMuOp5yXmvc3fyNTug1mUXobAiy6BXY_eCC5ySOLA5L4TRtH2iAu2kKC8JbJf70bVEgld28qIknJWIGNAScTIulNM3LRD5Zj2Z9kR9T8QUeGD6UmYVF5nre2xbH6LUJRI-hBsgg"); background-size: cover; background-position: center;'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<!-- Save Button -->
+<button class="absolute top-4 right-4 size-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:bg-white active:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<!-- Card Content -->
+<div class="absolute bottom-5 left-5 right-5">
+<h4 class="text-white text-lg font-bold">Kyoto, Japan</h4>
+<div class="flex items-center gap-1 mt-1 text-gray-300 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span> 5 days
+                                    <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[14px]">star</span> 4.9
+                                </div>
+<div class="mt-3 flex items-center gap-2">
+<div class="bg-primary px-3 py-1.5 rounded-full text-white text-xs font-bold shadow-lg shadow-primary/25">
+                                        $850
+                                    </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative w-64 h-80 rounded-[2rem] overflow-hidden group active:scale-95 transition-transform duration-300">
+<div class="absolute inset-0 bg-gray-200" data-alt="Snowy landscape in Iceland with northern lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSkIPT1BPco46VL5WRMxWTzllKkfX3RipobF1z7J2J9C2x7B_AbsdiqwbcMmX2loAhM0FFHALQ5ynDVH9klnKHWT_it0FuYv9K0-XEpfsL46SC77-uXYg2PqZ6Y7AVB-k4-wTtepTRXZFsGJBPVku2g8SASMSgEylZAKiiQy-SoQzik-phQK_33cBiCJbr8tzAc1Ff4aL2-TraCSK5oHXtSOej4JCHvdad8xvOPRhPhA-x7dXZbKLgOn-39bXpxf1NnTahbI3xOaM"); background-size: cover; background-position: center;'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<button class="absolute top-4 right-4 size-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:bg-white active:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<div class="absolute bottom-5 left-5 right-5">
+<h4 class="text-white text-lg font-bold">Reykjavik, Iceland</h4>
+<div class="flex items-center gap-1 mt-1 text-gray-300 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span> 7 days
+                                    <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[14px]">star</span> 4.7
+                                </div>
+<div class="mt-3 flex items-center gap-2">
+<div class="bg-primary px-3 py-1.5 rounded-full text-white text-xs font-bold shadow-lg shadow-primary/25">
+                                        $620
+                                    </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative w-64 h-80 rounded-[2rem] overflow-hidden group active:scale-95 transition-transform duration-300">
+<div class="absolute inset-0 bg-gray-200" data-alt="Tropical beach in Bali with palm trees" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHie61GPfcwjwNBbQLazJox2rTlbB_z8hkLCPmeLx15DKufbd-qZgtRAobnQOziOqgUwZNkhYYh3mXymRb3TmnJs_bcr6zP0MXGqQ9lsoXl98AUKcCshvHO9mNA5xQHHC8k63tNq7obYWzwNjvFvUlcdKXchcDDV71Qie9dlINYN562QLzvsYL5b28-0Oo1I9UZxWnqxZNPsNOT5sZK195x0NoyTf81vvewk-FD0x4OMM6qyX_-L4Gn2_Dm3o7SkalA4wzTd3W8oI"); background-size: cover; background-position: center;'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<button class="absolute top-4 right-4 size-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:bg-white active:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<div class="absolute bottom-5 left-5 right-5">
+<h4 class="text-white text-lg font-bold">Bali, Indonesia</h4>
+<div class="flex items-center gap-1 mt-1 text-gray-300 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span> 10 days
+                                    <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[14px]">star</span> 4.8
+                                </div>
+<div class="mt-3 flex items-center gap-2">
+<div class="bg-primary px-3 py-1.5 rounded-full text-white text-xs font-bold shadow-lg shadow-primary/25">
+                                        $450
+                                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inspiration / Recent Section (Additional Filler) -->
+<div class="px-6 mt-2 mb-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold tracking-tight text-[#111418] dark:text-white">Recent Searches</h3>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="size-12 rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-gray-500">schedule</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-[#111418] dark:text-white">London, UK</h4>
+<p class="text-xs text-gray-500">2 Adults • Sep 12 - Sep 19</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 w-full z-40 px-6 pb-6 pt-2 pointer-events-none">
+<div class="bg-white dark:bg-surface-dark/95 backdrop-blur-lg border border-gray-100 dark:border-gray-800 rounded-[2.5rem] shadow-2xl shadow-gray-200/50 dark:shadow-black/50 pointer-events-auto max-w-xl mx-auto">
+<div class="flex items-center justify-between px-6 h-[72px]">
+<button class="flex flex-col items-center justify-center gap-1 text-primary w-12 group">
+<span class="material-symbols-outlined filled-icon">home</span>
+<div class="size-1 rounded-full bg-primary mt-1"></div>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 w-12 transition-colors">
+<span class="material-symbols-outlined">airplane_ticket</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 w-12 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 w-12 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Extra CSS for the filled icon state -->
+<style>
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</body></html>

@@ -1,0 +1,3423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikky Trikky Codes - World Class Websites That Convert</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="nikky-trikky-logo.png"
+      type="image/x-icon"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #changing-word {
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      @keyframes ping {
+        75%,
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+      .animate-ping {
+        animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+
+      [data-animate] {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      [data-animate].visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+
+      .carousel {
+        animation: scroll 30s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes scrollReverse {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .carousel-reverse {
+        animation: scrollReverse 30s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="antialiased bg-black text-white scroll-smooth overflow-x-hidden">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-row items-center text-2xl font-bold">
+            <img
+              src="./nikky-trikky-logo.png"
+              alt="Logo"
+              class="h-20 w-auto object-contain"
+            />
+            <p
+              class="text-4xl text-[#2ee619]"
+              style="font-family: 'Tangerine', cursive"
+            >
+              Nikky Trikky Codes
+            </p>
+            <!-- <span
+              class="text-3xl font-bold text-white"
+              style="font-family: 'Tangerine', cursive"
+            >
+              Nikky Trikky
+            </span> -->
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex gap-6">
+            <li>
+              <a href="#home" class="hover:text-[#2ee619] transition">Home</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#2ee619] transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#newsletter" class="hover:text-[#2ee619] transition"
+                >Newsletter</a
+              >
+            </li>
+            <li>
+              <a href="#pricings" class="hover:text-[#2ee619] transition"
+                >Pricings</a
+              >
+            </li>
+            <li>
+              <a href="#benefits" class="hover:text-[#2ee619] transition"
+                >Benefits</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-[#2ee619] transition">About</a>
+            </li>
+          </ul>
+
+          <button
+            class="px-6 py-3 bg-white text-black rounded-full font-medium transform transition duration-300 hover:scale-105 hover:bg-gray-100 active:scale-95"
+          >
+            Contact
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" class="md:hidden">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-black/95 border-t border-white/10"
+      >
+        <ul class="px-6 py-4 space-y-4">
+          <li>
+            <a
+              href="#home"
+              class="block hover:text-[#2ee619] transition text-xl"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="block hover:text-[#2ee619] transition text-xl"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#newsletter"
+              class="block hover:text-[#2ee619] transition text-xl"
+              >Newsletter</a
+            >
+          </li>
+          <li>
+            <a
+              href="#pricings"
+              class="block hover:text-[#2ee619] transition text-xl"
+              >Pricings</a
+            >
+          </li>
+          <li>
+            <a
+              href="#benefits"
+              class="block hover:text-[#2ee619] transition text-xl"
+              >Benefits</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block hover:text-[#2ee619] transition text-xl"
+              >About</a
+            >
+          </li>
+        </ul>
+        <div class="px-6 pb-6">
+          <button
+            class="w-full px-6 py-3 bg-white text-black rounded-full font-medium transform transition duration-300 hover:scale-105 hover:bg-gray-100 active:scale-95"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center px-6 pt-32"
+    >
+      <div class="max-w-5xl mx-auto text-center">
+        <div class="flex justify-center items-center gap-4 mb-6" data-animate>
+          <div class="relative flex items-center justify-center">
+            <div
+              class="absolute w-6 h-6 bg-yellow-400/30 rounded-full animate-ping"
+            ></div>
+            <div
+              class="absolute w-4 h-4 bg-yellow-400/50 rounded-full animate-ping"
+              style="animation-delay: 75ms"
+            ></div>
+            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+          </div>
+          <p class="text-gray-300 text-lg">
+            Projects Open for
+            <span
+              id="current-month-text"
+              class="font-semibold text-white"
+            ></span>
+          </p>
+        </div>
+
+        <h1
+          class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
+          data-animate
+        >
+          World Class Websites That Convert Visitors Into Paying Customers On
+          <span class="text-[#2ee619]" id="changing-word">Repeat</span>
+        </h1>
+
+        <p
+          class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
+          data-animate
+        >
+          From Figma Website Designs to Pixel Perfect Developed Next.js 15
+          Website.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center"
+          data-animate
+        >
+          <button
+            class="px-8 sm:px-14 py-3 sm:py-4 bg-[#2ee619] text-black font-medium text-lg rounded-full hover:bg-[#2ee619] transition transform transition duration-300 hover:scale-105 hover:bg-gray-100 active:scale-95"
+          >
+            Get Started
+          </button>
+          <button
+            class="px-8 sm:px-12 py-3 sm:py-4 bg-[#202020] text-white font-medium text-lg rounded-full hover:bg-white hover:text-black transition transform transition duration-300 hover:scale-105 hover:bg-gray-100 active:scale-95"
+          >
+            Become Partner
+          </button>
+        </div>
+
+        <div class="hidden sm:flex justify-center items-center gap-10 mt-8">
+          <div class="flex items-center gap-2" data-animate>
+            <div class="w-5 h-5">
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="currentColor"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M13 10V1L5 14h7v9l9-13h-7z"
+                />
+              </svg>
+            </div>
+            <p class="text-white text-lg font-medium">
+              Latest Next.js + React Development
+            </p>
+          </div>
+          <div class="flex items-center gap-2" data-animate>
+            <div class="w-5 h-5">
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="currentColor"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M13 10V1L5 14h7v9l9-13h-7z"
+                />
+              </svg>
+            </div>
+            <p class="text-white text-lg font-medium">
+              High Converting Figma Designs
+            </p>
+          </div>
+          <div class="flex items-center gap-2" data-animate>
+            <div class="w-5 h-5">
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="currentColor"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M13 10V1L5 14h7v9l9-13h-7z"
+                />
+              </svg>
+            </div>
+            <p class="text-white text-lg font-medium">Custom Built Websites</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carousel Section -->
+    <section class="py-12 overflow-hidden">
+      <div class="flex gap-8 carousel mb-8 h-[40vh]">
+        <div class="flex gap-8 min-w-max">
+          <div class="w-48 sm:w-80 h-48 sm:h-80 rounded-2xl flex-shrink-0">
+            <iframe
+              src="./car-website-m/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./coffee-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./ecommerce-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./food-canteen-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./real-estate-m/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./travel-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-8 carousel-reverse h-[40vh]">
+        <div class="flex gap-8 min-w-max">
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./cream-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./news-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./lamp-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./furniture-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-emerald-500/20 to-green-500/20 rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./perfume-website/code.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-[#fff] rounded-2xl flex-shrink-0"
+          >
+            <iframe
+              src="./YES_TYME INVESTMENT/index.html"
+              class="w-48 sm:w-80 h-80 sm:h-80 rounded-2xl flex-shrink-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-2xl flex-shrink-0"
+          ></div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-2xl flex-shrink-0"
+          ></div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl flex-shrink-0"
+          ></div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex-shrink-0"
+          ></div>
+          <div
+            class="w-48 sm:w-80 h-80 sm:h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex-shrink-0"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Our Services</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            A Breakdown of What We Do
+          </h2>
+          <p
+            class="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Services that are built to last, with the latest technology. Get the
+            world-class designs, faster.
+          </p>
+        </div>
+
+        <div class="space-y-20">
+          <!-- Service 1 -->
+          <div
+            class="bg-[#11111180] rounded-2xl lg:rounded-3xl overflow-hidden"
+            data-animate
+          >
+            <div class="grid lg:grid-cols-2 gap-8 items-center p-8 lg:p-14">
+              <div>
+                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                  Website Design
+                </h3>
+                <p class="text-lg text-gray-300 mb-8">
+                  At Nikky Trikky Codes, we design visually stunning and
+                  user-friendly websites that help businesses stand out in
+                  today's competitive digital landscape.
+                </p>
+                <ul class="space-y-6">
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Multiple stunning design options with different
+                      styles</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Design is done by our expert designers</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Unlimited revisions before finalizing perfectly</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Custom design precisely as per your preferences</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Flawless responsive design for all devices</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Premium User Experience focused design</span
+                    >
+                  </li>
+                </ul>
+                <button
+                  class="mt-8 px-12 py-4 bg-white text-black font-medium text-lg rounded-full hover:bg-[#2ee619] transition"
+                >
+                  Get Started
+                </button>
+              </div>
+              <div
+                class="rounded-2xl h-96 h-full relative rounded-2xl overflow-hidden border border-white/10"
+              >
+                <iframe
+                  src="./car-website-m/code.html"
+                  class="w-full h-[560px]"
+                  loading="lazy"
+                ></iframe>
+
+                <!-- <img src="man-on-the-bike.png" alt="" /> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-[#11111180] rounded-2xl lg:rounded-3xl overflow-hidden"
+            data-animate
+          >
+            <div class="grid lg:grid-cols-2 gap-8 items-center p-8 lg:p-14">
+              <div class="lg:order-2">
+                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                  Website Development
+                </h3>
+                <p class="text-lg text-gray-300 mb-8">
+                  At Nikky Trikky Codes, we create intuitive, high-performance
+                  websites that help users and drive business growth across all
+                  over the world.
+                </p>
+                <ul class="space-y-6">
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Lightning-fast pixel perfect design with full
+                      responsiveness</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Smooth Animations and Interactions</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Secure Payment Gateway Integration (Stripe, Paypal,
+                      etc)</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Advanced Dashboards, Reports, SEO optimization</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Third party integrations (API, etc)</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg
+                      class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                    <span class="text-gray-200 lg:text-lg"
+                      >Forms and Contact Us Integration</span
+                    >
+                  </li>
+                </ul>
+                <button
+                  class="mt-8 px-12 py-4 bg-white text-black font-medium text-lg rounded-full hover:bg-[#2ee619] transition"
+                >
+                  Get Started
+                </button>
+              </div>
+              <div
+                class="rounded-2xl h-96 h-full relative rounded-2xl overflow-hidden border border-white/10"
+              >
+                <iframe
+                  src="./real-estate-m/code.html"
+                  class="w-full h-[560px]"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Problems</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Problems of Website Builder
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto"
+            data-animate
+          >
+            Many founders, startups, and agencies use website builders like
+            Framer, Webflow, Wordpress, Shopify, etc. but they are not for you.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-[#11111180] rounded-2xl p-8 lg:p-12 border border-[#222222]"
+            data-animate
+          >
+            <h3 class="text-3xl lg:text-4xl font-bold mb-4">
+              Framer & Webflow
+            </h3>
+            <p class="text-gray-400 mb-8">
+              Website builders like Framer, Webflow, Wordpress, Shopify, Wix,
+              Squarespace, etc. are not for you.
+            </p>
+            <ul class="space-y-6">
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-300"
+                  >Expensive paid plugins and themes</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-300"
+                  >Severely limited functionalities</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-300"
+                  >Frustratingly slow performance and speed</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-300"
+                  >Critical security issues and vulnerabilities</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-300"
+                  >Terrible SEO unfriendly and not optimized</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-300"
+                  >Bare minimum support and updates</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-[#2ee619] rounded-2xl p-8 lg:p-12" data-animate>
+            <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-black">
+              React and Next.js
+            </h3>
+            <p class="text-gray-800 mb-8">
+              React and Nextjs are the best option with the full control of the
+              website and the best performance and speed.
+            </p>
+            <ul class="space-y-6">
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-[#2ee619] flex items-center justify-center mt-1 flex-shrink-0 border-2 border-black"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-800">Zero paid plugins and themes</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-[#2ee619] flex items-center justify-center mt-1 flex-shrink-0 border-2 border-black"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-800"
+                  >Unlimited advance functionalities</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-[#2ee619] flex items-center justify-center mt-1 flex-shrink-0 border-2 border-black"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-800"
+                  >Blazing 10x performance and speed</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-[#2ee619] flex items-center justify-center mt-1 flex-shrink-0 border-2 border-black"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-800"
+                  >Rock-solid security and protection</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-[#2ee619] flex items-center justify-center mt-1 flex-shrink-0 border-2 border-black"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-800">Perfectly SEO optimized</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 rounded-full bg-[#2ee619] flex items-center justify-center mt-1 flex-shrink-0 border-2 border-black"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-800">Lifetime updates and support</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Scope / Process Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Project Scope</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Our Complete Process
+          </h2>
+          <p
+            class="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            This is our complete process for projects from start to finish with
+            our team of experts.
+          </p>
+        </div>
+
+        <div class="space-y-16">
+          <!-- Step 1 -->
+          <div class="grid lg:grid-cols-2 gap-8 items-center" data-animate>
+            <div class="text-center lg:text-right order-2 lg:order-1">
+              <h3
+                class="text-7xl lg:text-9xl xl:text-[150px] font-extrabold text-white uppercase tracking-tight"
+              >
+                STEP 01
+              </h3>
+            </div>
+            <div class="order-1 lg:order-2">
+              <div
+                class="bg-white text-black rounded-2xl lg:rounded-3xl p-8 hover:bg-[#2ee619] transition-colors group"
+              >
+                <div
+                  class="w-16 h-16 bg-black group-hover:bg-white rounded-xl mb-6 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-8 h-8 text-white group-hover:text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  Proposal
+                </h4>
+                <p class="text-gray-800 group-hover:text-gray-900 text-lg">
+                  At Nikky Trikky Codes, we start off with a proposal to
+                  understand your requirements and provide a quote. We ensure
+                  that you are satisfied with the proposal before we start
+                  working on your project.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center" data-animate>
+            <svg
+              class="w-12 h-12 text-[#2ee619]"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="grid lg:grid-cols-2 gap-8 items-center" data-animate>
+            <div class="text-center lg:text-left order-2">
+              <h3
+                class="text-7xl lg:text-9xl xl:text-[150px] font-extrabold text-white uppercase tracking-tight"
+              >
+                STEP 02
+              </h3>
+            </div>
+            <div class="order-1">
+              <div
+                class="bg-white text-black rounded-2xl lg:rounded-3xl p-8 hover:bg-[#2ee619] transition-colors group"
+              >
+                <div
+                  class="w-16 h-16 bg-black group-hover:bg-white rounded-xl mb-6 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-8 h-8 text-white group-hover:text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  Design
+                </h4>
+                <p class="text-gray-800 group-hover:text-gray-900 text-lg">
+                  Starting with the different design options. We make sure that
+                  you are satisfied with the design before we start working on
+                  your project. Moreover, we don't proceed without your
+                  approval.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center" data-animate>
+            <svg
+              class="w-12 h-12 text-[#2ee619]"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="grid lg:grid-cols-2 gap-8 items-center" data-animate>
+            <div class="text-center lg:text-right order-2 lg:order-1">
+              <h3
+                class="text-7xl lg:text-9xl xl:text-[150px] font-extrabold text-white uppercase tracking-tight"
+              >
+                STEP 03
+              </h3>
+            </div>
+            <div class="order-1 lg:order-2">
+              <div
+                class="bg-white text-black rounded-2xl lg:rounded-3xl p-8 hover:bg-[#2ee619] transition-colors group"
+              >
+                <div
+                  class="w-16 h-16 bg-black group-hover:bg-white rounded-xl mb-6 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-8 h-8 text-white group-hover:text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  Development
+                </h4>
+                <p class="text-gray-800 group-hover:text-gray-900 text-lg">
+                  After the design is approved, we start the development
+                  process. All the development is done by professional and any
+                  custom integration can be done during the development process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center" data-animate>
+            <svg
+              class="w-12 h-12 text-[#2ee619]"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="grid lg:grid-cols-2 gap-8 items-center" data-animate>
+            <div class="text-center lg:text-left order-2">
+              <h3
+                class="text-7xl lg:text-9xl xl:text-[150px] font-extrabold text-white uppercase tracking-tight"
+              >
+                STEP 04
+              </h3>
+            </div>
+            <div class="order-1">
+              <div
+                class="bg-white text-black rounded-2xl lg:rounded-3xl p-8 hover:bg-[#2ee619] transition-colors group"
+              >
+                <div
+                  class="w-16 h-16 bg-black group-hover:bg-white rounded-xl mb-6 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-8 h-8 text-white group-hover:text-black"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  Launch
+                </h4>
+                <p class="text-gray-800 group-hover:text-gray-900 text-lg">
+                  After the development is completed, we deploy the project on
+                  the server. We make sure that the project is deployed
+                  successfully and is running without any issues.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits of Subscriptions Section -->
+    <section id="benefits" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">
+              Benefits of Subscriptions
+            </p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Get the World-Class Designs, Faster
+          </h2>
+          <p
+            class="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Check the benefits of working with us with the latest technology and
+            tools.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-[#15151580] rounded-2xl p-8 hover:bg-[#2ee619] hover:text-black transition-all group"
+            data-animate
+          >
+            <div
+              class="w-14 h-14 bg-white/10 group-hover:bg-black/10 rounded-xl mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">
+              Unlimited Revisions
+            </h3>
+            <p class="text-gray-400 group-hover:text-black">
+              At Nikky Trikky Codes, we offer unlimited revisions to ensure that
+              you are satisfied with the final product. We don't proceed without
+              your approval.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#15151580] rounded-2xl p-8 hover:bg-[#2ee619] hover:text-black transition-all group"
+            data-animate
+          >
+            <div
+              class="w-14 h-14 bg-white/10 group-hover:bg-black/10 rounded-xl mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">
+              Easy Communication
+            </h3>
+            <p class="text-gray-400 group-hover:text-black">
+              You can communicate with us on any platform at any time and we
+              will respond to your queries as soon as possible. We are available
+              24/7 to assist you.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#15151580] rounded-2xl p-8 hover:bg-[#2ee619] hover:text-black transition-all group"
+            data-animate
+          >
+            <div
+              class="w-14 h-14 bg-white/10 group-hover:bg-black/10 rounded-xl mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">Fast Turnaround</h3>
+            <p class="text-gray-400 group-hover:text-black">
+              You can expect a quick turnaround time from us. We understand that
+              time is of the essence and we make sure to deliver your project on
+              time.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#15151580] rounded-2xl p-8 hover:bg-[#2ee619] hover:text-black transition-all group"
+            data-animate
+          >
+            <div
+              class="w-14 h-14 bg-white/10 group-hover:bg-black/10 rounded-xl mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">
+              Top-notch Quality
+            </h3>
+            <p class="text-gray-400 group-hover:text-black">
+              We ensure that your project is of the highest quality. We use the
+              best tools and technologies to deliver the best results.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#15151580] rounded-2xl p-8 hover:bg-[#2ee619] hover:text-black transition-all group"
+            data-animate
+          >
+            <div
+              class="w-14 h-14 bg-white/10 group-hover:bg-black/10 rounded-xl mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">No Contracts</h3>
+            <p class="text-gray-400 group-hover:text-black">
+              We don't require any contracts from our clients. We believe in
+              transparency and honesty and we don't want to bind our clients to
+              any contracts.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#15151580] rounded-2xl p-8 hover:bg-[#2ee619] hover:text-black transition-all group"
+            data-animate
+          >
+            <div
+              class="w-14 h-14 bg-white/10 group-hover:bg-black/10 rounded-xl mb-6 flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-white group-hover:text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">
+              Your Entire Team
+            </h3>
+            <p class="text-gray-400 group-hover:text-black">
+              We can work with your entire team to deliver the best results. We
+              understand that every project is unique and we make sure to
+              deliver the best results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Testimonials</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Our Clients Reviews
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Check out what our clients have to say about our work. We are proud
+            to have worked with some of the best clients in the industry.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-[#15151580] border border-[#222222] rounded-2xl p-6"
+            data-animate
+          >
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              The website design they created for our fintech startup is
+              absolutely stunning. Clean, modern, and converts like crazy. Our
+              investor meetings became so much easier when we could show them a
+              professional site that actually represents our vision.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex-shrink-0"
+              ></div>
+              <div>
+                <p class="font-semibold text-white">Marcus Chen</p>
+                <p class="text-sm text-gray-400">CEO, Singapore</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#15151580] border border-[#222222] rounded-2xl p-6"
+            data-animate
+          >
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Coming from Webflow templates, this custom design was a
+              game-changer. They understood our brand identity perfectly and
+              created something that stands out in our competitive market. The
+              attention to detail is incredible.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex-shrink-0"
+              ></div>
+              <div>
+                <p class="font-semibold text-white">Kai Nakamura</p>
+                <p class="text-sm text-gray-400">Founder, Japan</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#15151580] border border-[#222222] rounded-2xl p-6"
+            data-animate
+          >
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              They designed our entire dashboard from scratch and it's a
+              masterpiece. Our users went from complaining about the old
+              interface to actually enjoying using our platform. The UX flow is
+              so intuitive.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex-shrink-0"
+              ></div>
+              <div>
+                <p class="font-semibold text-white">Sofia Rodriguez</p>
+                <p class="text-sm text-gray-400">Product Manager, Spain</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#15151580] border border-[#222222] rounded-2xl p-6"
+            data-animate
+          >
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              They designed our corporate website with such elegance and
+              professionalism. The Arabic and English versions look flawless,
+              and the way they handled our complex navigation is brilliant.
+              Clients are impressed before we even meet.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex-shrink-0"
+              ></div>
+              <div>
+                <p class="font-semibold text-white">Ahmed Hassan</p>
+                <p class="text-sm text-gray-400">Business Owner, UAE</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#15151580] border border-[#222222] rounded-2xl p-6"
+            data-animate
+          >
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              The e-commerce design they created for us is pure art. Every
+              product page, checkout flow, and user journey was crafted with
+              such precision. Our conversion rate jumped from 2.1% to 4.8%
+              within the first month.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-amber-500 rounded-full flex-shrink-0"
+              ></div>
+              <div>
+                <p class="font-semibold text-white">Emma Thompson</p>
+                <p class="text-sm text-gray-400">
+                  E-commerce Director, Australia
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#15151580] border border-[#222222] rounded-2xl p-6"
+            data-animate
+          >
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Working with this team was seamless. They took our rough ideas and
+              turned them into a polished, professional website that perfectly
+              captures our brand. The feedback from our customers has been
+              overwhelmingly positive.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex-shrink-0"
+              ></div>
+              <div>
+                <p class="font-semibold text-white">David Kim</p>
+                <p class="text-sm text-gray-400">
+                  Marketing Director, South Korea
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design vs Development Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">
+              Understanding the Difference
+            </p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Design vs Development
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Many people confuse website design with full development. Let's
+            clarify the key differences.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-[#151515] border border-[#252525] rounded-2xl p-8 lg:p-10"
+            data-animate
+          >
+            <h3 class="text-3xl lg:text-4xl font-bold mb-4">Website Design</h3>
+            <p class="text-gray-400 mb-6 text-lg">
+              Static visual mockups and layouts
+            </p>
+            <div class="w-full h-px bg-white/10 mb-8"></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white text-lg"
+                  >Visual Mockups in Figma/Adobe XD</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white text-lg">UI/UX Layout & Structure</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white text-lg"
+                  >Color Schemes & Typography</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white text-lg">Design Assets & Icons</span>
+              </li>
+            </ul>
+            <div class="p-4 bg-[#25252580] border border-[#333333] rounded-lg">
+              <p class="text-gray-400 text-sm lg:text-base leading-relaxed">
+                <span class="text-white font-semibold">Important:</span> Design
+                files are static images. They cannot be published as a live
+                website.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border border-[#e5e5e5] rounded-2xl p-8 lg:p-10"
+            data-animate
+          >
+            <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-black">
+              Website Development
+            </h3>
+            <p class="text-gray-700 mb-6 text-lg">
+              Live, functional, and interactive code
+            </p>
+            <div class="w-full h-px bg-black/10 mb-8"></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black text-lg">Fully Functional Website</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black text-lg">Interactive Elements</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black text-lg">Backend Integration</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black text-lg"
+                  >Responsive & Optimized Code</span
+                >
+              </li>
+            </ul>
+            <div class="p-4 bg-black/5 border border-black/10 rounded-lg">
+              <p class="text-gray-700 text-sm lg:text-base leading-relaxed">
+                <span class="text-black font-semibold">Key Benefit:</span>
+                Development brings designs to life. You get a real website you
+                can launch and share with the world.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 max-w-4xl mx-auto text-center" data-animate>
+          <p class="text-gray-400 text-lg lg:text-xl leading-relaxed mb-4">
+            <span class="text-white font-semibold">Design</span> is like an
+            architectural blueprint, it shows you what the building will look
+            like. <span class="text-white font-semibold">Development</span> is
+            the actual construction, building the structure so people can walk
+            in and use it.
+          </p>
+          <p class="text-gray-400 text-lg lg:text-xl leading-relaxed">
+            Most of our packages include
+            <span class="text-white font-semibold"
+              >both design and development</span
+            >, giving you a complete, live website ready to launch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricings" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Our Pricings</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Transparent Pricings
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Your go-to solution for web and mobile apps, like many founders,
+            startups, and agencies do.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Starter Plan -->
+          <div
+            class="bg-[#25252580] border border-[#222222] rounded-2xl lg:rounded-3xl p-8 lg:p-10"
+            data-animate
+          >
+            <div class="mb-6">
+              <div class="inline-block px-4 py-2 rounded-full bg-black/10">
+                <span class="text-white font-medium">Starter plan</span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <span class="text-5xl lg:text-6xl font-bold text-white"
+                >$895</span
+              >
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Perfect for small businesses and freelancers who want to build a
+              website for their business.
+            </p>
+            <div class="w-full h-px bg-white/15 mb-6"></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white">Complete Landing Page Design</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white">Landing Page Development</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white">Basic SEO Setup</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white">Mobile Responsive Design</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-[#2ee619] flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-white">Up to 10 Design Revisions</span>
+              </li>
+            </ul>
+            <div class="w-full h-px bg-white/15 mb-8"></div>
+            <button
+              class="w-full py-4 bg-white text-black rounded-full font-medium text-lg hover:bg-[#2ee619] transition"
+            >
+              Get Started Now
+            </button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div
+            class="bg-[#2ee619] rounded-2xl lg:rounded-3xl p-8 lg:p-10 transform lg:scale-105"
+            data-animate
+          >
+            <div class="mb-6">
+              <div class="inline-block px-4 py-2 rounded-full bg-black/10">
+                <span class="text-black font-medium">Pro Plan</span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <span class="text-5xl lg:text-6xl font-bold text-black"
+                >$1875</span
+              >
+            </div>
+            <p class="text-gray-800 mb-6 leading-relaxed">
+              Perfect for small businesses and freelancers who want to build a
+              website for their business.
+            </p>
+            <div class="w-full h-px bg-black/15 mb-6"></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black">Complete Website (Up to 5 Pages)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black"
+                  >Website Development (React / Next.js)</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black">Pixel-Perfect Design</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black">Lightning-Fast Performance</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black"
+                  >Form Integration (Contact / Inquiry)</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black">Up to 20 Design Revisions</span>
+              </li>
+            </ul>
+            <div class="w-full h-px bg-black/15 mb-8"></div>
+            <button
+              class="w-full py-4 bg-black text-white rounded-full font-medium text-lg hover:bg-gray-900 transition"
+            >
+              Get Started Now
+            </button>
+          </div>
+
+          <!-- Ultimate Plan -->
+          <div
+            class="bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-10"
+            data-animate
+          >
+            <div class="mb-6">
+              <div class="inline-block px-4 py-2 rounded-full bg-black/10">
+                <span class="text-black font-medium">Ultimate</span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <span class="text-5xl lg:text-6xl font-bold text-black"
+                >$2785</span
+              >
+            </div>
+            <p class="text-gray-800 mb-6 leading-relaxed">
+              Perfect for businesses seeking a premium web solution with
+              advanced features.
+            </p>
+            <div class="w-full h-px bg-black/10 mb-6"></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black"
+                  >Multi-Page Website (Up to 10 Pages)</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black"
+                  >Pixel-Perfect Design & Development</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black">Lightning-Fast Performance</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black"
+                  >Payment Integration (Stripe, PayPal)</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black"
+                  >Any 3rd-Party Integration (CRM, API)</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-black flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  />
+                </svg>
+                <span class="text-black">Unlimited Revisions</span>
+              </li>
+            </ul>
+            <div class="w-full h-px bg-black/10 mb-8"></div>
+            <button
+              class="w-full py-4 bg-black text-white rounded-full font-medium text-lg hover:bg-gray-900 transition"
+            >
+              Get Started Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Comparison</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Why Choose Us?
+          </h2>
+        </div>
+
+        <div class="overflow-x-auto">
+          <div class="min-w-[1000px]">
+            <div class="grid grid-cols-6 gap-4 mb-4" data-animate>
+              <div></div>
+              <div class="text-center">
+                <h3 class="text-white font-semibold text-lg">Speed</h3>
+              </div>
+              <div class="text-center">
+                <h3 class="text-white font-semibold text-lg">Conversion</h3>
+              </div>
+              <div class="text-center">
+                <h3 class="text-white font-semibold text-lg">Quality</h3>
+              </div>
+              <div class="text-center">
+                <h3 class="text-white font-semibold text-lg">Scalability</h3>
+              </div>
+              <div class="text-center">
+                <h3 class="text-white font-semibold text-lg">Cost</h3>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <div
+                class="grid grid-cols-6 gap-4 bg-[#2ee619] rounded-2xl p-6"
+                data-animate
+              >
+                <div class="flex items-center">
+                  <h4 class="text-black font-bold text-lg">Our Agency</h4>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-black">40-70% faster</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-black">+30% in 60 days</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-black">Consistent</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-black">Highly scalable</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-black">One partner</p>
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-6 gap-4 bg-[#151515] rounded-2xl p-6"
+                data-animate
+              >
+                <div class="flex items-center">
+                  <h4 class="text-white font-bold text-lg">In-house Team</h4>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Slow hiring</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mb-2"
+                  >
+                    <span class="text-yellow-500 text-sm">!</span>
+                  </div>
+                  <p class="text-xs text-gray-300">Mixed clarity</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Consistent</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Limited</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Expensive</p>
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-6 gap-4 bg-[#151515] rounded-2xl p-6"
+                data-animate
+              >
+                <div class="flex items-center">
+                  <h4 class="text-white font-bold text-lg">Agencies</h4>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Long timelines</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Generic</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">High quality</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mb-2"
+                  >
+                    <span class="text-yellow-500 text-sm">!</span>
+                  </div>
+                  <p class="text-xs text-gray-300">CAC creeps</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">High retainers</p>
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-6 gap-4 bg-[#151515] rounded-2xl p-6"
+                data-animate
+              >
+                <div class="flex items-center">
+                  <h4 class="text-white font-bold text-lg">Freelancers</h4>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Inconsistent</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Mixed</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Variable</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Can't scale</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mb-2"
+                  >
+                    <span class="text-yellow-500 text-sm">!</span>
+                  </div>
+                  <p class="text-xs text-gray-300">Cheap but costly</p>
+                </div>
+              </div>
+
+              <div
+                class="grid grid-cols-6 gap-4 bg-[#151515] rounded-2xl p-6"
+                data-animate
+              >
+                <div class="flex items-center">
+                  <h4 class="text-white font-bold text-lg">AI Tools</h4>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Instant outputs</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">No narrative clarity</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Inconsistent quality</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Not enterprise-ready</p>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center text-center"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center mb-2"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-gray-300">Low cost</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Contact Us</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Get in Touch
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            We are here to help you with any questions or concerns you may have.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12">
+          <!-- Contact Information -->
+          <div class="lg:col-span-4 space-y-6" data-animate>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-semibold mb-4 text-white">
+                Contact Information
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Fill out the form and our team will get back to you within 24
+                hours.
+              </p>
+            </div>
+
+            <div class="space-y-4 mt-8">
+              <a
+                href="mailto:nikkytrikky1234@gmail.com"
+                class="flex items-start gap-4 p-4 bg-[#0A0A0A] border border-[#252525] rounded-xl hover:border-[#404040] transition group"
+              >
+                <div
+                  class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-medium mb-1">Email</h4>
+                  <p class="text-gray-400 text-sm">nikkytrikky1234@gmail.com</p>
+                </div>
+              </a>
+
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="flex items-start gap-4 p-4 bg-[#0A0A0A] border border-[#252525] rounded-xl hover:border-[#404040] transition group"
+              >
+                <div
+                  class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-medium mb-1">Twitter (X)</h4>
+                  <p class="text-gray-400 text-sm">@nikky_trikky_codes</p>
+                </div>
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="flex items-start gap-4 p-4 bg-[#0A0A0A] border border-[#252525] rounded-xl hover:border-[#404040] transition group"
+              >
+                <div
+                  class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-medium mb-1">Instagram</h4>
+                  <p class="text-gray-400 text-sm">@nikky_trikky_codes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-8" data-animate>
+            <form
+              class="bg-[#11111180] border border-[#252525] rounded-2xl p-6 sm:p-8 lg:p-10 space-y-6"
+            >
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-white text-sm font-medium mb-2">
+                    Full Name <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Enter your full name"
+                    class="w-full px-4 py-3 bg-[#151515] border border-[#252525] rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white transition"
+                  />
+                </div>
+                <div>
+                  <label class="block text-white text-sm font-medium mb-2">
+                    Email Address <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="your.email@example.com"
+                    class="w-full px-4 py-3 bg-[#151515] border border-[#252525] rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white transition"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-white text-sm font-medium mb-2">
+                  Service Interested In <span class="text-red-500">*</span>
+                </label>
+                <select
+                  required
+                  class="w-full px-4 py-3 bg-[#151515] border border-[#252525] rounded-lg text-white focus:outline-none focus:border-white transition appearance-none cursor-pointer"
+                  style="
+                    background-image: url('data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; fill=&#x27;none&#x27; viewBox=&#x27;0 0 24 24&#x27; stroke=&#x27;%23ffffff&#x27;%3E%3Cpath stroke-linecap=&#x27;round&#x27; stroke-linejoin=&#x27;round&#x27; stroke-width=&#x27;2&#x27; d=&#x27;M19 9l-7 7-7-7&#x27;%3E%3C/path%3E%3C/svg%3E');
+                    background-repeat: no-repeat;
+                    background-position: right 0.75rem center;
+                    background-size: 1.5em 1.5em;
+                    padding-right: 2.5rem;
+                  "
+                >
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile App Development">
+                    Mobile App Development
+                  </option>
+                  <option value="UI/UX Design">UI/UX Design</option>
+                  <option value="E-commerce Solutions">
+                    E-commerce Solutions
+                  </option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="SEO Services">SEO Services</option>
+                  <option value="Branding & Identity">
+                    Branding & Identity
+                  </option>
+                  <option value="Custom Software Development">
+                    Custom Software Development
+                  </option>
+                  <option value="Consulting">Consulting</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-white text-sm font-medium mb-2">
+                  Target Budget <span class="text-red-500">*</span>
+                </label>
+                <select
+                  required
+                  class="w-full px-4 py-3 bg-[#151515] border border-[#252525] rounded-lg text-white focus:outline-none focus:border-white transition appearance-none cursor-pointer"
+                  style="
+                    background-image: url('data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; fill=&#x27;none&#x27; viewBox=&#x27;0 0 24 24&#x27; stroke=&#x27;%23ffffff&#x27;%3E%3Cpath stroke-linecap=&#x27;round&#x27; stroke-linejoin=&#x27;round&#x27; stroke-width=&#x27;2&#x27; d=&#x27;M19 9l-7 7-7-7&#x27;%3E%3C/path%3E%3C/svg%3E');
+                    background-repeat: no-repeat;
+                    background-position: right 0.75rem center;
+                    background-size: 1.5em 1.5em;
+                    padding-right: 2.5rem;
+                  "
+                >
+                  <option value="" disabled selected>
+                    Select budget range
+                  </option>
+                  <option value="Less than $5,000">Less than $1,000</option>
+                  <option value="$5,000 - $10,000">$1,000 - $5,000</option>
+                  <option value="$10,000 - $25,000">$5,000 - $10,000</option>
+                  <option value="$25,000 - $50,000">$10,000 - $15,000</option>
+                  <option value="$50,000+">$15,000+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-white text-sm font-medium mb-2">
+                  Project Details <span class="text-red-500">*</span>
+                </label>
+                <textarea
+                  rows="6"
+                  required
+                  placeholder="Tell us about your project, goals, and any specific requirements..."
+                  class="w-full px-4 py-3 bg-[#151515] border border-[#252525] rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white transition resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#e3eb01] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Send Message
+              </button>
+
+              <p class="text-gray-600 text-xs text-center mt-6">
+                By submitting this form, you agree to our privacy policy. We'll
+                never share your information with third parties.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Connect With Us / Social Media Section -->
+
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">Connect With Us</p>
+          </div>
+          <div
+            class="flex flex-row items-center justify-center text-2xl font-bold"
+          >
+            <img
+              src="./nikky-trikky-logo.png"
+              alt="Logo"
+              class="h-40 w-auto object-contain"
+            />
+            <p
+              class="text-9xl text-[#2ee619]"
+              style="font-family: 'Tangerine', cursive"
+            >
+              Nikky Trikky Codes
+            </p>
+          </div>
+
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Live social media feeds - Follow us directly from here without
+            leaving the website
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <a
+            href="https://x.com"
+            target="_blank"
+            class="bg-[#11111180] border border-[#222222] rounded-2xl p-12 flex items-center justify-center hover:bg-black hover:border-white/20 transition-all group"
+            data-animate
+          >
+            <svg
+              class="w-8 h-8 text-white group-hover:scale-110 transition-transform"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="bg-[#11111180] border border-[#222222] rounded-2xl p-12 flex items-center justify-center hover:bg-black hover:border-white/20 transition-all group"
+            data-animate
+          >
+            <svg
+              class="w-8 h-8 text-white group-hover:scale-110 transition-transform"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            class="bg-[#11111180] border border-[#222222] rounded-2xl p-12 flex items-center justify-center hover:bg-black hover:border-white/20 transition-all group"
+            data-animate
+          >
+            <svg
+              class="w-8 h-8 text-white group-hover:scale-110 transition-transform"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://dribbble.com"
+            target="_blank"
+            class="bg-[#11111180] border border-[#222222] rounded-2xl p-12 flex items-center justify-center hover:bg-black hover:border-white/20 transition-all group"
+            data-animate
+          >
+            <svg
+              class="w-8 h-8 text-white group-hover:scale-110 transition-transform"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm8.09 5.1c1.45 1.77 2.33 4.01 2.37 6.46-.32-.07-3.53-.72-6.76-.31-.07-.16-.13-.33-.2-.5-.2-.49-.41-.98-.63-1.46 3.59-1.46 5.22-3.57 5.22-3.57s-.01-.01-.01-.02c.01-.01.01-.01.01-.02zM12 2.03c2.65 0 5.07 1 6.89 2.65 0 0-1.48 1.93-4.88 3.24-1.53-2.82-3.23-5.12-3.48-5.46-.48-.1-.98-.16-1.49-.16C8.99 2.3 8.99 2.3 12 2.03zm-3.75.65c.24.32 1.92 2.63 3.47 5.39-4.38 1.17-8.24 1.15-8.63 1.14.56-2.95 2.43-5.4 5.16-6.53zm-6.18 9.35c0-.06 0-.13.01-.19 0 0 .01-.01.02-.02.39.01 4.85.07 9.58-1.33.28.55.55 1.11.79 1.68-.12.03-.24.07-.36.11-4.93 1.59-7.55 5.95-7.55 5.95s-.01 0-.01.01C2.46 16.92 2.07 14.54 2.07"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="px-6 py-2 bg-[#151515] rounded-full inline-block mb-4"
+            data-animate
+          >
+            <p class="text-lg text-white font-semibold">FAQ</p>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4"
+            data-animate
+          >
+            Frequently Asked Questions
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
+            data-animate
+          >
+            Have questions? We've got answers. Find everything you need to know
+            about our services.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-[#151515] rounded-2xl overflow-hidden" data-animate>
+            <button
+              class="faq-btn w-full text-left p-6 flex items-center justify-between hover:bg-[#1a1a1a] transition"
+            >
+              <span class="text-lg font-semibold"
+                >How long does it take to complete a website?</span
+              >
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <p class="text-gray-400 leading-relaxed">
+                Typically, a standard website takes 2-4 weeks from design to
+                launch. However, the timeline depends on the project scope,
+                number of pages, and custom features required. We'll provide you
+                with a detailed timeline during the proposal phase.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#151515] rounded-2xl overflow-hidden" data-animate>
+            <button
+              class="faq-btn w-full text-left p-6 flex items-center justify-between hover:bg-[#1a1a1a] transition"
+            >
+              <span class="text-lg font-semibold"
+                >Do you provide website maintenance after launch?</span
+              >
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <p class="text-gray-400 leading-relaxed">
+                Yes! We offer ongoing maintenance and support packages to ensure
+                your website stays updated, secure, and performing optimally.
+                This includes regular updates, security patches, and content
+                updates as needed.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#151515] rounded-2xl overflow-hidden" data-animate>
+            <button
+              class="faq-btn w-full text-left p-6 flex items-center justify-between hover:bg-[#1a1a1a] transition"
+            >
+              <span class="text-lg font-semibold"
+                >What makes Next.js better than WordPress or Webflow?</span
+              >
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <p class="text-gray-400 leading-relaxed">
+                Next.js offers superior performance, better SEO, unlimited
+                customization, and no recurring platform fees. Unlike website
+                builders, you have complete control over your code and aren't
+                limited by templates or plugins. It's also significantly faster
+                and more secure.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#151515] rounded-2xl overflow-hidden" data-animate>
+            <button
+              class="faq-btn w-full text-left p-6 flex items-center justify-between hover:bg-[#1a1a1a] transition"
+            >
+              <span class="text-lg font-semibold"
+                >Can I update the website content myself?</span
+              >
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <p class="text-gray-400 leading-relaxed">
+                Absolutely! We can integrate a user-friendly CMS (Content
+                Management System) that allows you to easily update text,
+                images, and other content without any coding knowledge. We'll
+                also provide training on how to use it.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#151515] rounded-2xl overflow-hidden" data-animate>
+            <button
+              class="faq-btn w-full text-left p-6 flex items-center justify-between hover:bg-[#1a1a1a] transition"
+            >
+              <span class="text-lg font-semibold"
+                >What's your refund policy?</span
+              >
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <p class="text-gray-400 leading-relaxed">
+                We offer a satisfaction guarantee. If you're not happy with the
+                initial designs, we'll work with you through unlimited revisions
+                until you're completely satisfied. We don't proceed to
+                development without your approval on the design.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#151515] rounded-2xl overflow-hidden" data-animate>
+            <button
+              class="faq-btn w-full text-left p-6 flex items-center justify-between hover:bg-[#1a1a1a] transition"
+            >
+              <span class="text-lg font-semibold"
+                >Do you work with international clients?</span
+              >
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <p class="text-gray-400 leading-relaxed">
+                Yes! We work with clients worldwide. All communication happens
+                online through video calls, email, and project management tools.
+                We're flexible with time zones and ensure smooth communication
+                throughout the project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Close mobile menu when clicking links
+      mobileLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+      // FAQ Accordion
+      const faqBtns = document.querySelectorAll(".faq-btn");
+      faqBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector("svg");
+
+          // Toggle content
+          content.classList.toggle("hidden");
+
+          // Rotate icon
+          if (content.classList.contains("hidden")) {
+            icon.style.transform = "rotate(0deg)";
+          } else {
+            icon.style.transform = "rotate(180deg)";
+          }
+        });
+      });
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+      document.querySelectorAll("[data-animate]").forEach(function (element) {
+        observer.observe(element);
+      });
+
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      const now = new Date();
+      const monthName = months[now.getMonth()]; // gets current month
+      document.getElementById(
+        "current-month-text"
+      ).textContent = ` ${monthName}`;
+
+      const words = ["Repeat", "Loop", "Autopilot", " Demand", "Scheduled"];
+
+      let index = 0;
+      const wordEl = document.getElementById("changing-word");
+
+      setInterval(() => {
+        wordEl.style.opacity = 0;
+
+        setTimeout(() => {
+          index = (index + 1) % words.length;
+          wordEl.textContent = words[index];
+          wordEl.style.opacity = 1;
+        }, 300);
+      }, 3000);
+
+      
+      document.querySelectorAll(".auto-scroll").forEach((carousel) => {
+        let isInteracting = false;
+        let scrollSpeed = carousel.classList.contains("carousel-reverse")
+          ? -0.3
+          : 0.3;
+        let rafId;
+        let resumeTimeout;
+
+        function autoScroll() {
+          if (!isInteracting) {
+            carousel.scrollLeft += scrollSpeed;
+          }
+          rafId = requestAnimationFrame(autoScroll);
+        }
+
+        autoScroll();
+
+        // User starts interacting
+        const pause = () => {
+          isInteracting = true;
+          clearTimeout(resumeTimeout);
+        };
+
+        // User stops interacting
+        const resume = () => {
+          resumeTimeout = setTimeout(() => {
+            isInteracting = false;
+          }, 1200);
+        };
+
+        // Events that indicate user intent
+        carousel.addEventListener("wheel", pause, { passive: true });
+        carousel.addEventListener("touchstart", pause, { passive: true });
+        carousel.addEventListener("mousedown", pause);
+
+        carousel.addEventListener("wheel", resume, { passive: true });
+        carousel.addEventListener("touchend", resume);
+        carousel.addEventListener("mouseup", resume);
+        carousel.addEventListener("mouseleave", resume);
+      });
+
+      // Self-contained carousel
+      (() => {
+        document.querySelectorAll(".carousel-wrapper").forEach((wrapper) => {
+          const track = wrapper.querySelector(".carousel-track");
+          const direction = Number(wrapper.dataset.direction) || 1;
+
+          let pos = 0;
+          let isDragging = false;
+          let startX = 0;
+          let lastPos = 0;
+          let paused = false;
+
+          // duplicate content for seamless loop
+          track.innerHTML += track.innerHTML;
+          const contentWidth = track.scrollWidth / 2;
+
+          // animation loop
+          const animate = () => {
+            if (!paused && !isDragging) {
+              pos -= 0.35 * direction; // adjust speed here
+              if (pos <= -contentWidth) pos += contentWidth;
+              if (pos >= 0) pos -= contentWidth;
+              track.style.transform = `translateX(${pos}px)`;
+            }
+            requestAnimationFrame(animate);
+          };
+          animate();
+
+          // helper functions
+          const start = (x) => {
+            isDragging = true;
+            paused = true;
+            startX = x;
+            lastPos = pos;
+            track.classList.add("dragging");
+          };
+          const move = (x) => {
+            if (!isDragging) return;
+            pos = lastPos + (x - startX);
+            track.style.transform = `translateX(${pos}px)`;
+          };
+          const end = () => {
+            if (!isDragging) return;
+            isDragging = false;
+            track.classList.remove("dragging");
+            setTimeout(() => (paused = false), 1000);
+          };
+
+          // mouse events
+          wrapper.addEventListener("mousedown", (e) => start(e.clientX));
+          window.addEventListener("mousemove", (e) => move(e.clientX));
+          window.addEventListener("mouseup", end);
+
+          // touch events
+          wrapper.addEventListener(
+            "touchstart",
+            (e) => start(e.touches[0].clientX),
+            { passive: true }
+          );
+          wrapper.addEventListener(
+            "touchmove",
+            (e) => move(e.touches[0].clientX),
+            { passive: true }
+          );
+          wrapper.addEventListener("touchend", end);
+        });
+      })();
+      wrapper.addEventListener(
+        "touchmove",
+        (e) => {
+          e.preventDefault(); // <--- prevents the page from moving
+          move(e.touches[0].clientX);
+        },
+        { passive: false }
+      );
+    </script>
+  </body>
+</html>
